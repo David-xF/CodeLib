@@ -28,13 +28,13 @@ export OBJCOPY	:=	$(PREFIX)objcopy
 # SOURCES is a list of directories containing source code
 # INCLUDES is a list of directories containing extra header files
 #---------------------------------------------------------------------------------
-TARGET		:=	wrapper
+TARGET		:=	CodeLib
 BUILD		:=	build
 BUILD_DBG	:=	$(TARGET)_dbg
 SOURCES		:=	.
 DATA		:=	
 
-ASM_PATH    :=  C:/Users/David/Documents/BIN/graphicPacks/!Minecraft Cheats/Assembly/Aurora Client/patch_auc.asm
+ASM_PATH    :=  patch_codelib.asm
 
 INCLUDES	:=  include
 

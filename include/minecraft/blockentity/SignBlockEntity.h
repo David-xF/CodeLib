@@ -1,5 +1,7 @@
 #pragma once
 
+#include <code/code.h>
+
 #include "BlockEntity.h"
 
 #include "../client/resource/shared_ptr.h"

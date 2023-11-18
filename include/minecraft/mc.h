@@ -2,6 +2,10 @@
 
 #include "block/Block.h"
 
+#include "blockentity/BlockEntity.h"
+#include "blockentity/SignBlockEntity.h"
+#include "blockentity/TheEndGatewayEntity.h"
+
 #include "client/app/CInput.h"
 #include "client/app/CMinecraftApp.h"
 #include "client/app/ConsoleUIController.h"
@@ -59,11 +63,11 @@
 #include "network/packet/clientbound/ClientboundChatPacket.h"
 #include "network/packet/clientbound/ClientboundSoundPacket.h"
 
-// #include "network/packet/clientbound/"
 #include "network/packet/serverbound/ServerboundContainerClickPacket.h"
 #include "network/packet/serverbound/ServerboundInteractPacket.h"
 #include "network/packet/serverbound/ServerboundMovePlayerPacket.h"
 #include "network/packet/serverbound/ServerboundPlayerActionPacket.h"
+#include "network/packet/serverbound/ServerboundPreLoginPacket.h"
 #include "network/packet/serverbound/ServerboundSetCreativeModeSlotPacket.h"
 #include "network/packet/serverbound/ServerboundUseItemOnPacket.h"
 
@@ -82,7 +86,6 @@
 #include "rendering/GlStateManager.h"
 #include "rendering/Tesselator.h"
 
-// ui
 #include "ui/Gui.h"
 
 #include "util/AABB.h"
@@ -115,6 +118,7 @@
 #include "world/Level.h"
 #include "world/ServerLevel.h"
 
+// Prints a message into Chat.
 template<typename... Args>
 void mc_printf(const wchar_t* x, Args... args) {
     if (!mc::Minecraft::getInstance()->thePlayer) return;

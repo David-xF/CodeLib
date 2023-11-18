@@ -9,7 +9,7 @@ namespace mc {
         uint32_t field_0x4;
         uint32_t field_0x8;
         uint32_t field_0xC;
-        mc::BlockPos pos;
+        mc::BlockPos position;
         uint32_t field_0x1C;
         uint32_t field_0x20;
         uint32_t field_0x24;

@@ -31,9 +31,12 @@ void init() {
 int c_main(void*) {
     init();
 
+    // Your Code here gets executed in a thread
+
     return 0;
 }
 
+// Gets Called once at startup
 void _main() {
     mc::C4JThreadImpl* thread = new mc::C4JThreadImpl(c_main, nullptr, "Setup Thread", 0x200);
     thread->Run();

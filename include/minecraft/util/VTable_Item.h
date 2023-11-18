@@ -37,7 +37,7 @@ namespace mc {
         MC_VFUNC(bool, struct Item, isComplex__Fv);
         MC_VFUNC(void, struct Item, getUseAnimation__CF36not_null_ptr__tm__16_C12ItemInstance);
         MC_VFUNC(void, struct Item, getUseDuration__F35not_null_ptr__tm__15_12ItemInstance);
-        MC_VFUNC(void, struct Item, releaseUsing__F35not_null_ptr__tm__15_12ItemInstanceP5LevelQ2_5boost33shared_ptr__tm__15_12LivingEntityi, mc_boost::shared_ptr<struct ItemInstance>, struct Level*, mc_boost::shared_ptr<struct LivingEntity>, int duration);
+        MC_VFUNC(void, struct Item, releaseUsing, const mc_boost::shared_ptr<struct ItemInstance>&, struct Level*, const mc_boost::shared_ptr<struct LivingEntity>&, int);
         MC_VFUNC(void, struct Item, appendHoverText__F35not_null_ptr__tm__15_12ItemInstanceQ2_5boost25shared_ptr__tm__8_6PlayerPQ2_3std66vector__tm__52_10HtmlStringQ2_3std30allocator__tm__13_10HtmlStringb);
         MC_VFUNC(void, struct Item, getName__F35not_null_ptr__tm__15_12ItemInstance);
         MC_VFUNC(bool, struct Item, isFoil__F35not_null_ptr__tm__15_12ItemInstance, mc_boost::shared_ptr<struct ItemInstance>);
@@ -57,6 +57,5 @@ namespace mc {
         MC_VFUNC(void, struct Item, GetOverrideCount__Fv);
         MC_VFUNC(void, struct Item, GetOverrideCountColour__Fv);
         MC_VFUNC(void, struct Item, GetOverrideCountIcon__F35not_null_ptr__tm__15_12ItemInstance);
-
     };
 }

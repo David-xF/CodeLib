@@ -8,4 +8,4 @@
 #define WIDTH 640
 #define HEIGHT 360
 
-#define MC_SIZE(a, x) static_assert(sizeof(a) == x);
+#define MC_CHECK_SIZE(type, size) static_assert(sizeof(mc::type) == size, #type " has invalid size.")

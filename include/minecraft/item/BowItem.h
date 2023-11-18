@@ -16,6 +16,7 @@ namespace mc {
         }
 
         DEFINE_STATIC_VAR(struct VTable_Item*, vtbl, 0x10061554);
+        DEFINE_STATIC_VAR(int, itemId, 261);
 
         uint32_t field_0x78;
         uint32_t field_0x7C;
