@@ -36,18 +36,21 @@ namespace mc {
             if (!TestItem_default_vtbl) {
                 TestItem_default_vtbl = (VTable_Item*) new uint8_t[sizeof(VTable_Item)];
                 memcpy(TestItem_default_vtbl, BowItem::default_vtbl, sizeof(VTable_Item));
-                writeMem(((uint32_t) TestItem_default_vtbl + offsetof(VTable_Item, releaseUsing)), (uint32_t) ((void*) &TestItem::_releaseUsing));
-                TestItem_default_vtbl->releaseUsing = &TestItem::_releaseUsing;
+                TestItem_default_vtbl->releaseUsing = &TestItem::releaseUsing;
             }
 
             vtbl = TestItem_default_vtbl;
             wchar_t _iconName[0x40];
-            mc_swprintf(_iconName, 0x40, L"%ls", Item::byId(BowItem::default_itemId)->iconName.c_str());
+            mc::Item* bowItem = Item::byId(BowItem::default_itemId);
+            mc_swprintf(_iconName, 0x40, L"%ls", bowItem->iconName.c_str());
             iconName = _iconName;
+
+            unk_str = bowItem->unk_str.c_str();
         }
 
-        static void _releaseUsing(mc::Item* _this, const mc_boost::shared_ptr<struct ItemInstance>& instance, struct Level* level, const mc_boost::shared_ptr<struct LivingEntity>& entity, int duration) {
+        static Item* releaseUsing(mc::Item* _this, const mc_boost::shared_ptr<struct ItemInstance>& instance, struct Level* level, const mc_boost::shared_ptr<struct LivingEntity>& entity, int duration) {
             mc_printf(L"Release Using");
+            return _this;
         }
     };
 }

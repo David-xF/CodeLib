@@ -21,6 +21,36 @@ namespace mc {
             code::Func<void, 0x03293e88, ServerGamePacketListenerImpl*, double, double, double, float, float, bool, bool>()(this, x, y, z, yaw, pitch, unk1, unk2);
         }
 
+		static code::Func<void, 0x032dc90c, ServerGamePacketListenerImpl*, const mc_boost::shared_ptr<struct ServerboundMovePlayerPacket>&> _handleMovePlayer;
+		void handleMovePlayer(const mc_boost::shared_ptr<struct ServerboundMovePlayerPacket>& packet) {
+			_handleMovePlayer(this, packet);
+		}
+
+		static code::Func<void, 0x032dff9c, ServerGamePacketListenerImpl*, const mc_boost::shared_ptr<struct ServerboundPlayerActionPacket>&> _handlePlayerAction;
+		void handlePlayerAction(const mc_boost::shared_ptr<struct ServerboundPlayerActionPacket>& packet) {
+			_handlePlayerAction(this, packet);
+		}
+
+		static code::Func<void, 0x032e2c64, ServerGamePacketListenerImpl*, const mc_boost::shared_ptr<struct ServerboundUseItemOnPacket>&> _handleUseItemOn;
+		void handleUseItemOn(const mc_boost::shared_ptr<struct ServerboundUseItemOnPacket>& packet) {
+			_handleUseItemOn(this, packet);
+		}
+
+		static code::Func<void, 0x032e9b10, ServerGamePacketListenerImpl*, const mc_boost::shared_ptr<struct ServerboundContainerClickPacket>&> _handleContainerClick;
+		void handleContainerClick(const mc_boost::shared_ptr<struct ServerboundContainerClickPacket>& packet) {
+			_handleContainerClick(this, packet);
+		}
+
+		static code::Func<void, 0x032f9d3c, ServerGamePacketListenerImpl*, const mc_boost::shared_ptr<struct ClientboundSoundPacket>&> _handleSoundEvent;
+		void handleSoundEvent(const mc_boost::shared_ptr<struct ClientboundSoundPacket>& packet) {
+			_handleSoundEvent(this, packet);
+		}
+
+		static code::Func<void, 0x032e68a4, ServerGamePacketListenerImpl*, const mc_boost::shared_ptr<struct ClientboundChatPacket>&> _handleChat;
+		void handleChat(const mc_boost::shared_ptr<struct ClientboundChatPacket>& packet) {
+			_handleChat(this, packet);
+		}
+		
         uint32_t unk_0x0;
         uint32_t unk_0x4;
 	    struct Connection* connection;
@@ -47,7 +77,7 @@ namespace mc {
 	    uint32_t unk_0x5C;
 	    uint32_t unk_0x60;
 	    uint32_t unk_0x64;
-	    struct MinecraftServer *server;
+	    struct MinecraftServer* server;
 	    mc_boost::shared_ptr<struct ServerPlayer> player;
 	    uint32_t unk_0x74;
 	    uint32_t unk_0x78;

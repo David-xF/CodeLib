@@ -21,16 +21,16 @@ namespace mc {
             code::Func<void, 0x3065EE0, const mc_boost::shared_ptr<SimpleContainer>&, SimpleContainer*>()(ret, src);
         }
 
-        void getItem(uint32_t slot, mc_boost::shared_ptr<struct ItemInstance> const & item) {
-            code::Func<void, 0x028DCB78, SimpleContainer*, mc_boost::shared_ptr<struct ItemInstance> const &, uint32_t>()(this, item, slot);
+        void getItem(uint32_t slot, const mc_boost::shared_ptr<struct ItemInstance>& item) {
+            code::Func<void, 0x028DCB78, SimpleContainer*, const mc_boost::shared_ptr<struct ItemInstance>&, uint32_t>()(this, item, slot);
         }
 
-        void addItem(int slot, mc_boost::shared_ptr<struct ItemInstance> const & item) {
-            code::Func<void, 0x028f4200, SimpleContainer*, int, mc_boost::shared_ptr<struct ItemInstance> const &>()(this, slot, item);
+        void addItem(int slot, const mc_boost::shared_ptr<struct ItemInstance>& item) {
+            code::Func<void, 0x028f4200, SimpleContainer*, int, const mc_boost::shared_ptr<struct ItemInstance>&>()(this, slot, item);
         }
 
-        void setItem(int slot, mc_boost::shared_ptr<struct ItemInstance> const & item) {
-            code::Func<void, 0x028DD3C8, SimpleContainer*, int, mc_boost::shared_ptr<struct ItemInstance> const &>()(this, slot, item);
+        void setItem(int slot, const mc_boost::shared_ptr<struct ItemInstance>& item) {
+            code::Func<void, 0x028DD3C8, SimpleContainer*, int, const mc_boost::shared_ptr<struct ItemInstance>&>()(this, slot, item);
         }
 
         void clearContent() {
@@ -38,20 +38,13 @@ namespace mc {
         }
 
         uint32_t field_0x0;
-        uint32_t field_0x4;
-        uint32_t field_0x8;
-        uint32_t field_0xC;
-        uint32_t field_0x10;
-        uint32_t field_0x14;
-        uint32_t field_0x18;
-        uint32_t field_0x1C;
-        uint32_t field_0x20;
+        mstd::wstring field_0x4;
         uint32_t field_0x24;
         uint32_t field_0x28;
         uint32_t maxSlots; // I think
         uint32_t field_0x30;
         uint32_t field_0x34;
-        mstd::vector<void*> listeners; // net_minecraft_ContainerListener*
+        mstd::vector<struct net_minecraft_ContainerListener*> listeners;
         uint32_t field_0x48;
         uint32_t field_0x4C;
         uint32_t field_0x50;
@@ -60,3 +53,5 @@ namespace mc {
         Container container;
     };
 }
+
+MC_CHECK_SIZE(SimpleContainer, 0x68);

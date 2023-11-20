@@ -10,16 +10,21 @@
 namespace mc {
     class SignBlockEntity : public BlockEntity {
     public:
-		void SetMessage(int index, mstd::wstring const & message) {
-			code::Func<void, 0x02913680, SignBlockEntity*, int, mstd::wstring const &>()(this, index, message);
+		void SetMessage(int index, const mstd::wstring& message) {
+			code::Func<void, 0x02913680, SignBlockEntity*, int, const mstd::wstring&>()(this, index, message);
 		}
 
-		mc_boost::shared_ptr<struct Packet> const & getUpdatePacket() {
-			return code::Func<mc_boost::shared_ptr<struct Packet> const &, 0x029144b8, SignBlockEntity*>()(this);
+		const mc_boost::shared_ptr<struct Packet>& getUpdatePacket() {
+			return code::Func<const mc_boost::shared_ptr<struct Packet>&, 0x029144b8, SignBlockEntity*>()(this);
 		}
 
 		static uint64_t getType() {
 			return code::Func<uint64_t, 0x0297BF48>()();
+		}
+
+		static code::Func<bool, 0x02915610, SignBlockEntity*, mc_boost::shared_ptr<struct Player>> _executeClickCommands;
+		bool executeClickCommands(mc_boost::shared_ptr<struct Player> player) {
+			return _executeClickCommands(this, player);
 		}
 
 		uint32_t field_0x28;

@@ -39,12 +39,17 @@
 #include "entity/player/RemotePlayer.h"
 #include "entity/player/ServerPlayer.h"
 
+#include "entity/AgableMob.h"
+#include "entity/Animal.h"
 #include "entity/AreaEffectCloud.h"
 #include "entity/Entity.h"
 #include "entity/ItemEntity.h"
 #include "entity/ItemFrame.h"
 #include "entity/LivingEntity.h"
+#include "entity/Mob.h"
 #include "entity/Painting.h"
+#include "entity/PathfinderMob.h"
+#include "entity/Sheep.h"
 #include "entity/SpectralArrow.h"
 #include "entity/TippableArrow.h"
 

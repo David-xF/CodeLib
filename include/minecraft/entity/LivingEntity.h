@@ -154,7 +154,7 @@ namespace mc {
 		uint32_t field_0x518;
 		uint32_t field_0x51C;
 		uint32_t bowPower; // IDK has something to do with Bows i guess
-		uint32_t field_0x524;
+		int anotherTickCount; // idk
 		uint32_t field_0x528;
 		uint32_t field_0x52C;
 		uint32_t field_0x530;

@@ -81,14 +81,7 @@ namespace mc {
         uint32_t field_0x1C;
         uint32_t field_0x20;
         uint32_t field_0x24;
-        uint32_t field_0x28;
-        uint32_t field_0x2C;
-        uint32_t field_0x30;
-        uint32_t field_0x34;
-        uint32_t field_0x38;
-        uint32_t field_0x3C;
-        uint32_t field_0x40;
-        uint32_t field_0x44;
+        mstd::wstring unk_str;
         uint32_t field_0x48;
         uint32_t field_0x4C;
         mstd::wstring iconName;

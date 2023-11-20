@@ -3,6 +3,7 @@
 #include <code/code.h>
 
 #include "Player.h"
+#include "../../util/InteractionHand.h"
 
 // 0318ABFC
 namespace mc {
@@ -36,8 +37,9 @@ namespace mc {
             return code::Func<bool, 0x031EC5B4, LocalPlayer*>()(this);
         }
 
-        void swing() {
-            code::Func<void, 0x031e7d74, LocalPlayer*, int>()(this, 0);
+        static code::Func<void, 0x031E7D74, LocalPlayer*, mc::InteractionHand::EInteractionHand> _swing;
+        void swing(mc::InteractionHand::EInteractionHand hand) {
+            _swing(this, hand);
         }
 
         void openContainer(const mc_boost::shared_ptr<struct Container>& container) {

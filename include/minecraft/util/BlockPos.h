@@ -22,6 +22,17 @@ namespace mc {
 		bool operator!=(const BlockPos& pos) {
 			return code::Func<bool, 0x020c4c04, BlockPos*, const BlockPos&>()(this, pos);
 		}
+
+		template<typename T>
+		void forBox(int radius, void(*func)(mc::BlockPos pos, T& context), T context) {
+			for (int _x = -radius; _x <= radius; _x++) {
+				for (int _y = -radius; _y <= radius; _y++) {
+					for (int _z = -radius; _z <= radius; _z++) {
+						func({_x + x, _y + y, _z + z}, context);
+					}
+				}
+			}
+		}
 	  	
         int x;
         int y;

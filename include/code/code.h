@@ -1,7 +1,7 @@
 #pragma once
 
 #include "mem.h"
-#include "rawFunc.h"
+#include "Func.h"
 #include "startup.h"
 #include "Random.h"
 

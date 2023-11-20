@@ -28,23 +28,21 @@ void init() {
     memoryInitialize();
 }
 
-DECL_FUNCTION(bool, executeClickCommands__15SignBlockEntityFQ2_5boost25shared_ptr__tm__8_6Player, mc::SignBlockEntity* sign, mc_boost::shared_ptr<mc::Player> player) {
-    mc::ServerPlayer* sPlayer = nullptr;;
-    for (mc_boost::shared_ptr<mc::ServerPlayer>& s_player : mc::MinecraftServer::getInstance()->getPlayers()->players) {
-        if (player->colourIndex == s_player->colourIndex) {
-            sPlayer = s_player.get();
-        }
-    }
+DECL_FUNCTION(void, ServerPlayer_Swing, mc::ServerPlayer* player, mc::InteractionHand::EInteractionHand eHand) {
+    real_ServerPlayer_Swing(player, eHand);
 
-    if (!sPlayer) return true;
-    
-    return true;
+    mc::SimpleContainer* cont = new mc::SimpleContainer(0, 0, L"Menu", 27);
+    mc_boost::shared_ptr<mc::SimpleContainer> shared;
+    mc::SimpleContainer::toShared(shared, cont);
+
+    for (int i = 0; i < 27; i++) shared->setItem(i, new mc::ItemInstance(mc::Item::byId(1), i));
+    player->openContainer(&shared->container);
 }
 
 int c_main(void*) {
     init();
 
-    REPLACE(mc::SignBlockEntity::_executeClickCommands.addr(), executeClickCommands__15SignBlockEntityFQ2_5boost25shared_ptr__tm__8_6Player);
+    REPLACE(0x032d8b5c, ServerPlayer_Swing);
 
     return 0;
 }

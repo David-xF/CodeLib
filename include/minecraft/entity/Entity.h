@@ -59,6 +59,10 @@ namespace mc {
 		void remove() {
 			code::Func<void, 0x0232b538, Entity*>()(this);
 		}
+
+		bool isSneaking() {
+			return code::Func<bool, 0x02340568, Entity*>()(this);
+		}
         
         uint32_t field_0x0;
 		uint32_t field_0x4;
@@ -233,7 +237,7 @@ namespace mc {
 		uint32_t skinAnim;
 		uint32_t field_0x33C;
 		uint32_t field_0x340;
-		uint32_t field_0x344;
+		int tickCount; // bge 0x14 | tickCount = 0 
 		struct VTable_Entity* vtable;
 		uint32_t field_0x34C;
     };
