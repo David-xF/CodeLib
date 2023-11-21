@@ -28,24 +28,15 @@ void init() {
     memoryInitialize();
 }
 
-DECL_FUNCTION(void, ServerPlayer_Swing, mc::ServerPlayer* player, mc::InteractionHand::EInteractionHand eHand) {
-    real_ServerPlayer_Swing(player, eHand);
-
-    mc::ServerLevel* level = mc::MinecraftServer::getInstance()->getLevel(0);
-    mc::Sheep* sheep = new mc::Sheep(player->lvl);
-    sheep->registerGoals();
-    sheep->moveTo(player->position.x, player->position.y, player->position.z, player->yaw, player->pitch);
-    level->addEntity(sheep);
-}
-
 int c_main(void*) {
     init();
 
-    REPLACE(0x032d8b5c, ServerPlayer_Swing);
+    // Your Code here gets executed in a thread
 
     return 0;
 }
 
+// Gets Called once at startup
 void _main() {
     mc::C4JThreadImpl* thread = new mc::C4JThreadImpl(c_main, nullptr, "Setup Thread", 0x200);
     thread->Run();
