@@ -34,7 +34,8 @@ BUILD_DBG	:=	$(TARGET)_dbg
 SOURCES		:=	.
 DATA		:=	
 
-ASM_PATH    :=  patch_codelib.asm
+# ASM_PATH    :=  patch_codelib.asm
+ASM_PATH    :=  C:/Users/David/Documents/BIN/graphicPacks/!Minecraft Cheats/Assembly/Aurora Client/patch_auc.asm
 
 INCLUDES	:=  include
 

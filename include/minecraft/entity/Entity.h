@@ -67,7 +67,7 @@ namespace mc {
         uint32_t field_0x0;
 		uint32_t field_0x4;
 		void* anotherVtbl; // Will look at later
-		uint32_t id;
+		uint32_t entityId;
 		uint32_t field_0x10;
 		uint32_t field_0x14;
 		uint32_t field_0x18;

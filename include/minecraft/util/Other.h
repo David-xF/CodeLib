@@ -6,6 +6,10 @@
     uint32_t valName;                         \
     asm volatile("mflr %0" : "=r" (valName)); 
 
+wchar_t* getNNID() {
+	wchar_t* nnidAddr = ((wchar_t*) ((uint32_t) code::Mem(0x104CCB18).as<wchar_t*>() + 0x50)); // Miku666
+	return nnidAddr;
+}
 
 wchar_t* getEffectName(int id) {
     const wchar_t* names[] = {

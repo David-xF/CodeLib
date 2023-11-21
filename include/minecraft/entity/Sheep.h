@@ -1,5 +1,7 @@
 #pragma once
 
+#include <code/code.h>
+
 #include "Animal.h"
 
 namespace mc {
@@ -8,6 +10,12 @@ namespace mc {
         Sheep(struct Level* _level) {
             code::Func<void, 0x0287f8b8, Sheep*, struct Level*>()(this, _level);
         }
+
+        void registerGoals() {
+            code::Func<void, 0x028802C0, Sheep*>()(this);
+        }
+
+        DEFINE_STATIC_VAR(struct VTable_Entity*, vtbl, 0x10242E30);
 
         uint32_t field_0x780;
         uint32_t field_0x784;

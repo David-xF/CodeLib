@@ -5,9 +5,6 @@
 #include "../client/resource/ResourceLocation.h"
 #include "../client/resource/wstring.h"
 
-#define DEFINE_STATIC_VAR(type, name, addr) \
-	static inline type default_##name = (type) addr
-
 namespace mc {
     class Item {
     public:

@@ -28,20 +28,30 @@ void init() {
     memoryInitialize();
 }
 
-DECL_FUNCTION(void, ServerPlayer_Swing, mc::ServerPlayer* player, mc::InteractionHand::EInteractionHand eHand) {
-    real_ServerPlayer_Swing(player, eHand);
+int swkbd_callback(void* data, bool unk) {
+    wchar_t* nnidAddr = (wchar_t*) data;
+    wchar_t buff[17];
+    mc::CInput::GetInput()->GetText(buff, 17);
 
-    mc::ServerLevel* level = mc::MinecraftServer::getInstance()->getLevel(0);
-    mc::Sheep* sheep = new mc::Sheep(player->lvl);
-    sheep->registerGoals();
-    sheep->moveTo(player->position.x, player->position.y, player->position.z, player->yaw, player->pitch);
-    level->addEntity(sheep);
+    mc_swprintf(nnidAddr, 17, L"%ls", buff);
+    mc_printf(L"[NNID] Changed NNID to %ls", buff);
+    return 0;
+}
+
+void openNNIDChangeKeyboard() {
+    wchar_t* nnidAddr = getNNID();
+    mc::CInput::GetInput()->RequestKeyboard(L"", nnidAddr, 0, 16, swkbd_callback, nnidAddr, mc::CInput::KeyboardMode::NNID);
+}
+
+DECL_HOOK(onFrameInGame, void) {
+    START_BUTTONCHECK(button & VPAD_BUTTON_RIGHT, openNNIDChangeKeyboard, button)
+    END_BUTTONCHECK()
 }
 
 int c_main(void*) {
     init();
 
-    REPLACE(0x032d8b5c, ServerPlayer_Swing);
+    HOOK(0x02D9CAD0, onFrameInGame, 0);
 
     return 0;
 }

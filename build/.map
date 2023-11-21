@@ -124,6 +124,7 @@ Discarded input sections
  .comment       0x0000000000000000       0x24 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/crtbegin.o
  .group         0x0000000000000000        0xc Main.o
  .group         0x0000000000000000        0xc Main.o
+ .group         0x0000000000000000        0xc Main.o
  .text          0x0000000000000000        0x0 Main.o
  .data          0x0000000000000000        0x0 Main.o
  .bss           0x0000000000000000        0x0 Main.o
@@ -132,10 +133,6 @@ Discarded input sections
                 0x0000000000000000        0x4 Main.o
  .text._Z8writeMemjj
                 0x0000000000000000        0x8 Main.o
- .text._Z8branchTojPv
-                0x0000000000000000       0x1c Main.o
- .text._Z21setupRealInstructionsPjj
-                0x0000000000000000       0x90 Main.o
  .text._Z5_TESTjji
                 0x0000000000000000       0x9c Main.o
  .text._Z19replaceInstructionsjN2xf6VectorIjEE
@@ -220,10 +217,6 @@ Discarded input sections
  .text._Z6toCStrfi
                 0x0000000000000000      0x168 Main.o
  .text._Znaj    0x0000000000000000        0x4 Main.o
- .text._Z4_newIjEPT_j
-                0x0000000000000000       0x44 Main.o
- .text._Z16safeInstructionsj
-                0x0000000000000000       0x8c Main.o
  .text.startup._GLOBAL__sub_I_entry
                 0x0000000000000000       0x18 Main.o
  .ctors         0x0000000000000000        0x4 Main.o
@@ -233,15 +226,11 @@ Discarded input sections
                 0x0000000000000000       0x10 Main.o
  .bss.kernelCopyBufferOld
                 0x0000000000000000       0x80 Main.o
- .bss.instructionBuffer
-                0x0000000000000000      0x400 Main.o
- .sbss.__test_index
-                0x0000000000000000        0x4 Main.o
  .sbss._ZN4code7mLehmerE
                 0x0000000000000000        0x4 Main.o
  .rodata.cst4   0x0000000000000000        0xc Main.o
  .rodata        0x0000000000000000       0x70 Main.o
- .eh_frame      0x0000000000000000      0x7a8 Main.o
+ .eh_frame      0x0000000000000000      0x820 Main.o
  .text          0x0000000000000000        0x0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(del_ops.o)
  .data          0x0000000000000000        0x0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(del_ops.o)
  .bss           0x0000000000000000        0x0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(del_ops.o)
@@ -777,679 +766,709 @@ LOAD c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/ecrtn.o
 .sdata2         0x0000000000000000        0x0
  .sdata2        0x0000000000000000        0x0 Main.o
 
-.text           0x0000000001800000     0x9f74
+.text           0x0000000001800000     0xa800
  *(.entry)
  .entry         0x0000000001800000       0x20 Main.o
                 0x0000000001800000                entry
  *(.text.*)
+ .text._Z23exec_ServerPlayer_SwingPN2mc12ServerPlayerENS_15InteractionHand16EInteractionHandE
+                0x0000000001800020       0xd0 Main.o
+                0x0000000001800020                _Z23exec_ServerPlayer_SwingPN2mc12ServerPlayerENS_15InteractionHand16EInteractionHandE
  .text._Z10targetAddrj
-                0x0000000001800020       0x18 Main.o
-                0x0000000001800020                _Z10targetAddrj
+                0x00000000018000f0       0x18 Main.o
+                0x00000000018000f0                _Z10targetAddrj
  .text._Z12InitTCPGeckov
-                0x0000000001800038       0x44 Main.o
-                0x0000000001800038                _Z12InitTCPGeckov
+                0x0000000001800108       0x44 Main.o
+                0x0000000001800108                _Z12InitTCPGeckov
  .text._Z7_deletePv
-                0x000000000180007c       0x10 Main.o
-                0x000000000180007c                _Z7_deletePv
- .text._ZdlPv   0x000000000180008c       0x20 Main.o
-                0x000000000180008c                _ZdlPv
+                0x000000000180014c       0x10 Main.o
+                0x000000000180014c                _Z7_deletePv
+ .text._ZdlPv   0x000000000180015c       0x20 Main.o
+                0x000000000180015c                _ZdlPv
+ .text._Z8branchTojPv
+                0x000000000180017c       0x1c Main.o
+                0x000000000180017c                _Z8branchTojPv
+ .text._Z21setupRealInstructionsPjj
+                0x0000000001800198       0x90 Main.o
+                0x0000000001800198                _Z21setupRealInstructionsPjj
  .text._Z27InitLibCurlFunctionPointersv
-                0x00000000018000ac      0x130 Main.o
-                0x00000000018000ac                _Z27InitLibCurlFunctionPointersv
+                0x0000000001800228      0x130 Main.o
+                0x0000000001800228                _Z27InitLibCurlFunctionPointersv
  .text._Z26InitSocketFunctionPointersv
-                0x00000000018001dc      0x3c4 Main.o
-                0x00000000018001dc                _Z26InitSocketFunctionPointersv
+                0x0000000001800358      0x3c4 Main.o
+                0x0000000001800358                _Z26InitSocketFunctionPointersv
  .text._Z24InitVPadFunctionPointersv
-                0x00000000018005a0       0xa0 Main.o
-                0x00000000018005a0                _Z24InitVPadFunctionPointersv
+                0x000000000180071c       0xa0 Main.o
+                0x000000000180071c                _Z24InitVPadFunctionPointersv
  .text._Z23InitGX2FunctionPointersv
-                0x0000000001800640       0x70 Main.o
-                0x0000000001800640                _Z23InitGX2FunctionPointersv
+                0x00000000018007bc       0x70 Main.o
+                0x00000000018007bc                _Z23InitGX2FunctionPointersv
  .text._Z26InitKernelFunctionPointersv
-                0x00000000018006b0       0xd0 Main.o
-                0x00000000018006b0                _Z26InitKernelFunctionPointersv
+                0x000000000180082c       0xd0 Main.o
+                0x000000000180082c                _Z26InitKernelFunctionPointersv
  .text._Z22InitOSFunctionPointersv
-                0x0000000001800780      0x310 Main.o
-                0x0000000001800780                _Z22InitOSFunctionPointersv
+                0x00000000018008fc      0x310 Main.o
+                0x00000000018008fc                _Z22InitOSFunctionPointersv
  .text._Z26InitMemoryFunctionPointersv
-                0x0000000001800a90      0x22c Main.o
-                0x0000000001800a90                _Z26InitMemoryFunctionPointersv
+                0x0000000001800c0c      0x22c Main.o
+                0x0000000001800c0c                _Z26InitMemoryFunctionPointersv
  .text._Z16memoryInitializev
-                0x0000000001800cbc       0xf4 Main.o
-                0x0000000001800cbc                _Z16memoryInitializev
+                0x0000000001800e38       0xf4 Main.o
+                0x0000000001800e38                _Z16memoryInitializev
  .text._Z4_newIcEPT_j
-                0x0000000001800db0       0x40 Main.o
-                0x0000000001800db0                _Z4_newIcEPT_j
+                0x0000000001800f2c       0x40 Main.o
+                0x0000000001800f2c                _Z4_newIcEPT_j
+ .text._Z21my_ServerPlayer_SwingPN2mc12ServerPlayerENS_15InteractionHand16EInteractionHandE
+                0x0000000001800f6c       0xe8 Main.o
+                0x0000000001800f6c                _Z21my_ServerPlayer_SwingPN2mc12ServerPlayerENS_15InteractionHand16EInteractionHandE
  .text._Z5_mainv
-                0x0000000001800df0       0x9c Main.o
-                0x0000000001800df0                _Z5_mainv
+                0x0000000001801054       0x9c Main.o
+                0x0000000001801054                _Z5_mainv
  .text._Z8InitWupsv
-                0x0000000001800e8c       0x3c Main.o
-                0x0000000001800e8c                _Z8InitWupsv
+                0x00000000018010f0       0x3c Main.o
+                0x00000000018010f0                _Z8InitWupsv
  .text._Z4initv
-                0x0000000001800ec8       0x40 Main.o
-                0x0000000001800ec8                _Z4initv
+                0x000000000180112c       0x40 Main.o
+                0x000000000180112c                _Z4initv
+ .text._Z4_newIjEPT_j
+                0x000000000180116c       0x44 Main.o
+                0x000000000180116c                _Z4_newIjEPT_j
+ .text._Z16safeInstructionsj
+                0x00000000018011b0       0x8c Main.o
+                0x00000000018011b0                _Z16safeInstructionsj
+ .text._Z4_newIPPvEPT_j
+                0x000000000180123c       0x44 Main.o
+                0x000000000180123c                _Z4_newIPPvEPT_j
  .text._Z6c_mainPv
-                0x0000000001800f08       0x24 Main.o
-                0x0000000001800f08                _Z6c_mainPv
- .text._ZdlPvj  0x0000000001800f2c        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(del_ops.o)
-                0x0000000001800f2c                _ZdlPvj
+                0x0000000001801280      0x124 Main.o
+                0x0000000001801280                _Z6c_mainPv
+ .text._ZdlPvj  0x00000000018013a4        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(del_ops.o)
+                0x00000000018013a4                _ZdlPvj
  .text._ZL16get_adjusted_ptrPKSt9type_infoS1_PPv
-                0x0000000001800f30       0xa0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_personality.o)
+                0x00000000018013a8       0xa0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_personality.o)
  .text._ZL28read_encoded_value_with_basehjPKhPj
-                0x0000000001800fd0      0x13c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_personality.o)
+                0x0000000001801448      0x13c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_personality.o)
  .text._ZL21base_of_encoded_valuehP15_Unwind_Context
-                0x000000000180110c       0x68 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_personality.o)
+                0x0000000001801584       0x68 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_personality.o)
  .text._ZL17parse_lsda_headerP15_Unwind_ContextPKhP16lsda_header_info
-                0x0000000001801174      0x11c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_personality.o)
+                0x00000000018015ec      0x11c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_personality.o)
  .text._ZL20check_exception_specP16lsda_header_infoPKSt9type_infoPvl
-                0x0000000001801290      0x138 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_personality.o)
+                0x0000000001801708      0x138 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_personality.o)
  .text.__gxx_personality_v0
-                0x00000000018013c8      0x7a4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_personality.o)
-                0x00000000018013c8                __gxx_personality_v0
+                0x0000000001801840      0x7a4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_personality.o)
+                0x0000000001801840                __gxx_personality_v0
  .text._ZN10__cxxabiv111__terminateEPFvvE
-                0x0000000001801b6c       0x20 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_terminate.o)
-                0x0000000001801b6c                _ZN10__cxxabiv111__terminateEPFvvE
+                0x0000000001801fe4       0x20 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_terminate.o)
+                0x0000000001801fe4                _ZN10__cxxabiv111__terminateEPFvvE
  .text._ZSt9terminatev
-                0x0000000001801b8c       0x24 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_terminate.o)
-                0x0000000001801b8c                _ZSt9terminatev
+                0x0000000001802004       0x24 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_terminate.o)
+                0x0000000001802004                _ZSt9terminatev
  .text._ZN10__cxxabiv112__unexpectedEPFvvE
-                0x0000000001801bb0       0x18 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_terminate.o)
-                0x0000000001801bb0                _ZN10__cxxabiv112__unexpectedEPFvvE
+                0x0000000001802028       0x18 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_terminate.o)
+                0x0000000001802028                _ZN10__cxxabiv112__unexpectedEPFvvE
  .text._ZSt10unexpectedv
-                0x0000000001801bc8       0x24 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_terminate.o)
-                0x0000000001801bc8                _ZSt10unexpectedv
+                0x0000000001802040       0x24 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_terminate.o)
+                0x0000000001802040                _ZSt10unexpectedv
  .text.__cxa_call_terminate
-                0x0000000001801bec       0x58 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_call.o)
-                0x0000000001801bec                __cxa_call_terminate
+                0x0000000001802064       0x58 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_call.o)
+                0x0000000001802064                __cxa_call_terminate
  .text.__cxa_begin_catch
-                0x0000000001801c44       0xc4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_catch.o)
-                0x0000000001801c44                __cxa_begin_catch
+                0x00000000018020bc       0xc4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_catch.o)
+                0x00000000018020bc                __cxa_begin_catch
  .text.__cxa_get_globals
-                0x0000000001801d08       0xbc c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_globals.o)
-                0x0000000001801d08                __cxa_get_globals
+                0x0000000001802180       0xbc c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_globals.o)
+                0x0000000001802180                __cxa_get_globals
  .text._ZN10__cxxabiv120__si_class_type_infoD2Ev
-                0x0000000001801dc4       0x10 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(si_class_type_info.o)
-                0x0000000001801dc4                _ZN10__cxxabiv120__si_class_type_infoD1Ev
-                0x0000000001801dc4                _ZN10__cxxabiv120__si_class_type_infoD2Ev
+                0x000000000180223c       0x10 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(si_class_type_info.o)
+                0x000000000180223c                _ZN10__cxxabiv120__si_class_type_infoD1Ev
+                0x000000000180223c                _ZN10__cxxabiv120__si_class_type_infoD2Ev
  .text._ZN10__cxxabiv120__si_class_type_infoD0Ev
-                0x0000000001801dd4       0x40 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(si_class_type_info.o)
-                0x0000000001801dd4                _ZN10__cxxabiv120__si_class_type_infoD0Ev
+                0x000000000180224c       0x40 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(si_class_type_info.o)
+                0x000000000180224c                _ZN10__cxxabiv120__si_class_type_infoD0Ev
  .text._ZNK10__cxxabiv120__si_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE
-                0x0000000001801e14      0x1d4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(si_class_type_info.o)
-                0x0000000001801e14                _ZNK10__cxxabiv120__si_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE
+                0x000000000180228c      0x1d4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(si_class_type_info.o)
+                0x000000000180228c                _ZNK10__cxxabiv120__si_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE
  .text._ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_
-                0x0000000001801fe8       0xb4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(si_class_type_info.o)
-                0x0000000001801fe8                _ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_
+                0x0000000001802460       0xb4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(si_class_type_info.o)
+                0x0000000001802460                _ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_
  .text._ZNK10__cxxabiv120__si_class_type_info11__do_upcastEPKNS_17__class_type_infoEPKvRNS1_15__upcast_resultE
-                0x000000000180209c       0x94 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(si_class_type_info.o)
-                0x000000000180209c                _ZNK10__cxxabiv120__si_class_type_info11__do_upcastEPKNS_17__class_type_infoEPKvRNS1_15__upcast_resultE
+                0x0000000001802514       0x94 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(si_class_type_info.o)
+                0x0000000001802514                _ZNK10__cxxabiv120__si_class_type_info11__do_upcastEPKNS_17__class_type_infoEPKvRNS1_15__upcast_resultE
  .text._ZNSt9type_infoD2Ev
-                0x0000000001802130        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(tinfo.o)
-                0x0000000001802130                _ZNSt9type_infoD2Ev
-                0x0000000001802130                _ZNSt9type_infoD1Ev
+                0x00000000018025a8        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(tinfo.o)
+                0x00000000018025a8                _ZNSt9type_infoD2Ev
+                0x00000000018025a8                _ZNSt9type_infoD1Ev
  .text._ZNKSt9type_info14__is_pointer_pEv
-                0x0000000001802134        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(tinfo.o)
-                0x0000000001802134                _ZNKSt9type_info14__is_pointer_pEv
-                0x0000000001802134                _ZNKSt9type_info15__is_function_pEv
+                0x00000000018025ac        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(tinfo.o)
+                0x00000000018025ac                _ZNKSt9type_info14__is_pointer_pEv
+                0x00000000018025ac                _ZNKSt9type_info15__is_function_pEv
  .text._ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PPv
-                0x000000000180213c       0x7c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(class_type_info.o)
-                0x000000000180213c                _ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PPv
+                0x00000000018025b4       0x7c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(class_type_info.o)
+                0x00000000018025b4                _ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PPv
  .text._ZNK10__cxxabiv117__class_type_info20__do_find_public_srcEiPKvPKS0_S2_
-                0x00000000018021b8       0x18 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(class_type_info.o)
-                0x00000000018021b8                _ZNK10__cxxabiv117__class_type_info20__do_find_public_srcEiPKvPKS0_S2_
+                0x0000000001802630       0x18 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(class_type_info.o)
+                0x0000000001802630                _ZNK10__cxxabiv117__class_type_info20__do_find_public_srcEiPKvPKS0_S2_
  .text._ZN10__cxxabiv117__class_type_infoD2Ev
-                0x00000000018021d0       0x10 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(class_type_info.o)
-                0x00000000018021d0                _ZN10__cxxabiv117__class_type_infoD2Ev
-                0x00000000018021d0                _ZN10__cxxabiv117__class_type_infoD1Ev
+                0x0000000001802648       0x10 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(class_type_info.o)
+                0x0000000001802648                _ZN10__cxxabiv117__class_type_infoD2Ev
+                0x0000000001802648                _ZN10__cxxabiv117__class_type_infoD1Ev
  .text._ZN10__cxxabiv117__class_type_infoD0Ev
-                0x00000000018021e0       0x40 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(class_type_info.o)
-                0x00000000018021e0                _ZN10__cxxabiv117__class_type_infoD0Ev
+                0x0000000001802658       0x40 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(class_type_info.o)
+                0x0000000001802658                _ZN10__cxxabiv117__class_type_infoD0Ev
  .text._ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PKvRNS0_15__upcast_resultE
-                0x0000000001802220       0x94 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(class_type_info.o)
-                0x0000000001802220                _ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PKvRNS0_15__upcast_resultE
+                0x0000000001802698       0x94 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(class_type_info.o)
+                0x0000000001802698                _ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PKvRNS0_15__upcast_resultE
  .text._ZNK10__cxxabiv117__class_type_info10__do_catchEPKSt9type_infoPPvj
-                0x00000000018022b4      0x104 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(class_type_info.o)
-                0x00000000018022b4                _ZNK10__cxxabiv117__class_type_info10__do_catchEPKSt9type_infoPPvj
+                0x000000000180272c      0x104 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(class_type_info.o)
+                0x000000000180272c                _ZNK10__cxxabiv117__class_type_info10__do_catchEPKSt9type_infoPPvj
  .text._ZNK10__cxxabiv117__class_type_info12__do_dyncastEiNS0_10__sub_kindEPKS0_PKvS3_S5_RNS0_16__dyncast_resultE
-                0x00000000018023b8      0x138 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(class_type_info.o)
-                0x00000000018023b8                _ZNK10__cxxabiv117__class_type_info12__do_dyncastEiNS0_10__sub_kindEPKS0_PKvS3_S5_RNS0_16__dyncast_resultE
+                0x0000000001802830      0x138 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(class_type_info.o)
+                0x0000000001802830                _ZNK10__cxxabiv117__class_type_info12__do_dyncastEiNS0_10__sub_kindEPKS0_PKvS3_S5_RNS0_16__dyncast_resultE
  .text.__gthread_once
-                0x00000000018024f0       0x1c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(gthr-dkp.o)
-                0x00000000018024f0                __gthread_once
+                0x0000000001802968       0x1c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(gthr-dkp.o)
+                0x0000000001802968                __gthread_once
  .text.__gthread_getspecific
-                0x000000000180250c       0x44 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(gthr-dkp.o)
-                0x000000000180250c                __gthread_getspecific
+                0x0000000001802984       0x44 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(gthr-dkp.o)
+                0x0000000001802984                __gthread_getspecific
  .text.__gthread_setspecific
-                0x0000000001802550       0x44 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(gthr-dkp.o)
-                0x0000000001802550                __gthread_setspecific
+                0x00000000018029c8       0x44 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(gthr-dkp.o)
+                0x00000000018029c8                __gthread_setspecific
  .text.__gthread_mutex_init_function
-                0x0000000001802594       0x14 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(gthr-dkp.o)
-                0x0000000001802594                __gthread_mutex_init_function
+                0x0000000001802a0c       0x14 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(gthr-dkp.o)
+                0x0000000001802a0c                __gthread_mutex_init_function
  .text.__gthread_mutex_lock
-                0x00000000018025a8       0x1c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(gthr-dkp.o)
-                0x00000000018025a8                __gthread_mutex_lock
+                0x0000000001802a20       0x1c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(gthr-dkp.o)
+                0x0000000001802a20                __gthread_mutex_lock
  .text.__gthread_mutex_unlock
-                0x00000000018025c4       0x1c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(gthr-dkp.o)
-                0x00000000018025c4                __gthread_mutex_unlock
+                0x0000000001802a3c       0x1c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(gthr-dkp.o)
+                0x0000000001802a3c                __gthread_mutex_unlock
  .text.init_dwarf_reg_size_table
-                0x00000000018025e0      0x1d0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
+                0x0000000001802a58      0x1d0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
  .text.uw_install_context_1
-                0x00000000018027b0      0x1d0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
+                0x0000000001802c28      0x1d0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
  .text.read_encoded_value
-                0x0000000001802980      0x194 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
+                0x0000000001802df8      0x194 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
  .text.execute_stack_op
-                0x0000000001802b14      0x88c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
+                0x0000000001802f8c      0x88c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
  .text.uw_update_context_1
-                0x00000000018033a0      0x39c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
+                0x0000000001803818      0x39c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
  .text.execute_cfa_program
-                0x000000000180373c      0x934 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
+                0x0000000001803bb4      0x934 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
  .text.uw_frame_state_for
-                0x0000000001804070      0x4e4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
+                0x00000000018044e8      0x4e4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
  .text.uw_init_context_1
-                0x0000000001804554      0x2cc c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
+                0x00000000018049cc      0x2cc c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
  .text._Unwind_RaiseException_Phase2
-                0x0000000001804820      0x1c8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
+                0x0000000001804c98      0x1c8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
  .text._Unwind_ForcedUnwind_Phase2
-                0x00000000018049e8      0x1d8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
+                0x0000000001804e60      0x1d8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
  .text._Unwind_SetGR
-                0x0000000001804bc0       0x68 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
-                0x0000000001804bc0                _Unwind_SetGR
+                0x0000000001805038       0x68 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
+                0x0000000001805038                _Unwind_SetGR
  .text._Unwind_GetIPInfo
-                0x0000000001804c28       0x14 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
-                0x0000000001804c28                _Unwind_GetIPInfo
+                0x00000000018050a0       0x14 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
+                0x00000000018050a0                _Unwind_GetIPInfo
  .text._Unwind_SetIP
-                0x0000000001804c3c        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
-                0x0000000001804c3c                _Unwind_SetIP
+                0x00000000018050b4        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
+                0x00000000018050b4                _Unwind_SetIP
  .text._Unwind_GetLanguageSpecificData
-                0x0000000001804c44        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
-                0x0000000001804c44                _Unwind_GetLanguageSpecificData
+                0x00000000018050bc        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
+                0x00000000018050bc                _Unwind_GetLanguageSpecificData
  .text._Unwind_GetRegionStart
-                0x0000000001804c4c        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
-                0x0000000001804c4c                _Unwind_GetRegionStart
+                0x00000000018050c4        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
+                0x00000000018050c4                _Unwind_GetRegionStart
  .text._Unwind_GetDataRelBase
-                0x0000000001804c54        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
-                0x0000000001804c54                _Unwind_GetDataRelBase
+                0x00000000018050cc        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
+                0x00000000018050cc                _Unwind_GetDataRelBase
  .text._Unwind_GetTextRelBase
-                0x0000000001804c5c        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
-                0x0000000001804c5c                _Unwind_GetTextRelBase
+                0x00000000018050d4        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
+                0x00000000018050d4                _Unwind_GetTextRelBase
  .text._Unwind_DebugHook
-                0x0000000001804c64        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
+                0x00000000018050dc        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
  .text._Unwind_Resume
-                0x0000000001804c68      0x1dc c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
-                0x0000000001804c68                _Unwind_Resume
+                0x00000000018050e0      0x1dc c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
+                0x00000000018050e0                _Unwind_Resume
  .text.fde_unencoded_compare
-                0x0000000001804e44       0x20 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2-fde.o)
+                0x00000000018052bc       0x20 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2-fde.o)
  .text.frame_downheap
-                0x0000000001804e64      0x13c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2-fde.o)
+                0x00000000018052dc      0x13c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2-fde.o)
  .text.frame_heapsort
-                0x0000000001804fa0      0x118 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2-fde.o)
+                0x0000000001805418      0x118 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2-fde.o)
  .text.init_object_mutex
-                0x00000000018050b8        0xc c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2-fde.o)
+                0x0000000001805530        0xc c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2-fde.o)
  .text.read_encoded_value_with_base
-                0x00000000018050c4      0x13c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2-fde.o)
+                0x000000000180553c      0x13c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2-fde.o)
  .text.get_cie_encoding
-                0x0000000001805200      0x14c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2-fde.o)
+                0x0000000001805678      0x14c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2-fde.o)
  .text.classify_object_over_fdes
-                0x000000000180534c      0x250 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2-fde.o)
+                0x00000000018057c4      0x250 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2-fde.o)
  .text.fde_single_encoding_compare
-                0x000000000180559c       0xd0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2-fde.o)
+                0x0000000001805a14       0xd0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2-fde.o)
  .text.fde_mixed_encoding_compare
-                0x000000000180566c      0x15c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2-fde.o)
+                0x0000000001805ae4      0x15c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2-fde.o)
  .text.add_fdes
-                0x00000000018057c8      0x2b8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2-fde.o)
+                0x0000000001805c40      0x2b8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2-fde.o)
  .text.linear_search_fdes
-                0x0000000001805a80      0x318 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2-fde.o)
+                0x0000000001805ef8      0x318 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2-fde.o)
  .text.search_object
-                0x0000000001805d98      0x804 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2-fde.o)
+                0x0000000001806210      0x804 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2-fde.o)
  .text._Unwind_Find_FDE
-                0x000000000180659c      0x260 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2-fde.o)
-                0x000000000180659c                _Unwind_Find_FDE
+                0x0000000001806a14      0x260 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2-fde.o)
+                0x0000000001806a14                _Unwind_Find_FDE
  .text.unlikely.abort
-                0x00000000018067fc       0x28 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libsysbase.a(abort.o)
-                0x00000000018067fc                abort
- .text._exit    0x0000000001806824       0x28 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libsysbase.a(_exit.o)
-                0x0000000001806824                _exit
- .text.malloc   0x000000000180684c       0x10 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libc.a(lib_a-malloc.o)
-                0x000000000180684c                malloc
- .text.free     0x000000000180685c       0x10 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libc.a(lib_a-malloc.o)
-                0x000000000180685c                free
+                0x0000000001806c74       0x28 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libsysbase.a(abort.o)
+                0x0000000001806c74                abort
+ .text._exit    0x0000000001806c9c       0x28 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libsysbase.a(_exit.o)
+                0x0000000001806c9c                _exit
+ .text.malloc   0x0000000001806cc4       0x10 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libc.a(lib_a-malloc.o)
+                0x0000000001806cc4                malloc
+ .text.free     0x0000000001806cd4       0x10 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libc.a(lib_a-malloc.o)
+                0x0000000001806cd4                free
  .text._malloc_r
-                0x000000000180686c      0x860 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libc.a(lib_a-mallocr.o)
-                0x000000000180686c                _malloc_r
- .text.memcpy   0x00000000018070cc      0x128 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libc.a(lib_a-memcpy.o)
-                0x00000000018070cc                memcpy
- .text.memset   0x00000000018071f4      0x194 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libc.a(lib_a-memset.o)
-                0x00000000018071f4                memset
- .text.strcmp   0x0000000001807388       0x9c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libc.a(lib_a-strcmp.o)
-                0x0000000001807388                strcmp
- .text.strlen   0x0000000001807424       0x80 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libc.a(lib_a-strlen.o)
-                0x0000000001807424                strlen
- .text.write    0x00000000018074a4       0x20 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libc.a(lib_a-syswrite.o)
-                0x00000000018074a4                write
+                0x0000000001806ce4      0x860 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libc.a(lib_a-mallocr.o)
+                0x0000000001806ce4                _malloc_r
+ .text.memcpy   0x0000000001807544      0x128 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libc.a(lib_a-memcpy.o)
+                0x0000000001807544                memcpy
+ .text.memset   0x000000000180766c      0x194 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libc.a(lib_a-memset.o)
+                0x000000000180766c                memset
+ .text.strcmp   0x0000000001807800       0x9c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libc.a(lib_a-strcmp.o)
+                0x0000000001807800                strcmp
+ .text.strlen   0x000000000180789c       0x80 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libc.a(lib_a-strlen.o)
+                0x000000000180789c                strlen
+ .text.write    0x000000000180791c       0x20 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libc.a(lib_a-syswrite.o)
+                0x000000000180791c                write
  .text._malloc_trim_r
-                0x00000000018074c4      0x138 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libc.a(lib_a-freer.o)
-                0x00000000018074c4                _malloc_trim_r
- .text._free_r  0x00000000018075fc      0x330 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libc.a(lib_a-freer.o)
-                0x00000000018075fc                _free_r
- .text._sbrk_r  0x000000000180792c       0x28 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libsysbase.a(sbrk.o)
-                0x000000000180792c                _sbrk_r
+                0x000000000180793c      0x138 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libc.a(lib_a-freer.o)
+                0x000000000180793c                _malloc_trim_r
+ .text._free_r  0x0000000001807a74      0x330 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libc.a(lib_a-freer.o)
+                0x0000000001807a74                _free_r
+ .text._sbrk_r  0x0000000001807da4       0x28 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libsysbase.a(sbrk.o)
+                0x0000000001807da4                _sbrk_r
  .text._write_r
-                0x0000000001807954       0xc4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libsysbase.a(write.o)
-                0x0000000001807954                _write_r
+                0x0000000001807dcc       0xc4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libsysbase.a(write.o)
+                0x0000000001807dcc                _write_r
  .text.__get_handle
-                0x0000000001807a18       0x24 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libsysbase.a(handle_manager.o)
-                0x0000000001807a18                __get_handle
+                0x0000000001807e90       0x24 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libsysbase.a(handle_manager.o)
+                0x0000000001807e90                __get_handle
  .text.__malloc_lock
-                0x0000000001807a3c       0x14 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libsysbase.a(syscall_support.o)
-                0x0000000001807a3c                __malloc_lock
+                0x0000000001807eb4       0x14 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libsysbase.a(syscall_support.o)
+                0x0000000001807eb4                __malloc_lock
  .text.__malloc_unlock
-                0x0000000001807a50       0x14 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libsysbase.a(syscall_support.o)
-                0x0000000001807a50                __malloc_unlock
+                0x0000000001807ec8       0x14 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libsysbase.a(syscall_support.o)
+                0x0000000001807ec8                __malloc_unlock
  .text.null_write
-                0x0000000001807a64        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libsysbase.a(iosupport.o)
+                0x0000000001807edc        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libsysbase.a(iosupport.o)
  *(.gcc_except_table)
  *(.gcc_except_table.*)
  .gcc_except_table._ZdlPv
-                0x0000000001807a6c        0x4 Main.o
+                0x0000000001807ee4        0x4 Main.o
+ .gcc_except_table._Z21my_ServerPlayer_SwingPN2mc12ServerPlayerENS_15InteractionHand16EInteractionHandE
+                0x0000000001807ee8       0x11 Main.o
  .gcc_except_table._Z5_mainv
-                0x0000000001807a70       0x11 Main.o
- *fill*         0x0000000001807a81        0x3 
+                0x0000000001807ef9       0x11 Main.o
+ *fill*         0x0000000001807f0a        0x2 
  .gcc_except_table.__gxx_personality_v0
-                0x0000000001807a84       0x1c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_personality.o)
+                0x0000000001807f0c       0x1c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_personality.o)
  .gcc_except_table._ZN10__cxxabiv111__terminateEPFvvE
-                0x0000000001807aa0       0x10 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_terminate.o)
+                0x0000000001807f28       0x10 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_terminate.o)
  .gcc_except_table.__cxa_get_globals
-                0x0000000001807ab0        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_globals.o)
+                0x0000000001807f38        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_globals.o)
  *(.sdata)
- .sdata         0x0000000001807ab4        0x0 Main.o
-                0x000000000180fab4                _SDA_BASE_
- .sdata         0x0000000001807ab4        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libc.a(lib_a-impure.o)
-                0x0000000001807ab4                _global_impure_ptr
-                0x0000000001807ab8                _impure_ptr
+ .sdata         0x0000000001807f3c        0x0 Main.o
+                0x000000000180ff3c                _SDA_BASE_
+ .sdata         0x0000000001807f3c        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libc.a(lib_a-impure.o)
+                0x0000000001807f3c                _global_impure_ptr
+                0x0000000001807f40                _impure_ptr
  *(.sdata.*)
  .sdata._ZN10__cxxabiv120__unexpected_handlerE
-                0x0000000001807abc        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_unex_handler.o)
-                0x0000000001807abc                _ZN10__cxxabiv120__unexpected_handlerE
+                0x0000000001807f44        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_unex_handler.o)
+                0x0000000001807f44                _ZN10__cxxabiv120__unexpected_handlerE
  .sdata._ZTIN10__cxxabiv115__forced_unwindE
-                0x0000000001807ac0        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_exception.o)
-                0x0000000001807ac0                _ZTIN10__cxxabiv115__forced_unwindE
+                0x0000000001807f48        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_exception.o)
+                0x0000000001807f48                _ZTIN10__cxxabiv115__forced_unwindE
  .sdata._ZTIN10__cxxabiv119__foreign_exceptionE
-                0x0000000001807ac8        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_exception.o)
-                0x0000000001807ac8                _ZTIN10__cxxabiv119__foreign_exceptionE
+                0x0000000001807f50        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_exception.o)
+                0x0000000001807f50                _ZTIN10__cxxabiv119__foreign_exceptionE
  .sdata._ZN10__cxxabiv119__terminate_handlerE
-                0x0000000001807ad0        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_term_handler.o)
-                0x0000000001807ad0                _ZN10__cxxabiv119__terminate_handlerE
+                0x0000000001807f58        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_term_handler.o)
+                0x0000000001807f58                _ZN10__cxxabiv119__terminate_handlerE
  .sdata._ZTISt9type_info
-                0x0000000001807ad4        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(tinfo.o)
-                0x0000000001807ad4                _ZTISt9type_info
+                0x0000000001807f5c        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(tinfo.o)
+                0x0000000001807f5c                _ZTISt9type_info
  .sdata.__malloc_sbrk_base
-                0x0000000001807adc        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libc.a(lib_a-mallocr.o)
-                0x0000000001807adc                __malloc_sbrk_base
+                0x0000000001807f64        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libc.a(lib_a-mallocr.o)
+                0x0000000001807f64                __malloc_sbrk_base
  .sdata.__malloc_trim_threshold
-                0x0000000001807ae0        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libc.a(lib_a-mallocr.o)
-                0x0000000001807ae0                __malloc_trim_threshold
+                0x0000000001807f68        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libc.a(lib_a-mallocr.o)
+                0x0000000001807f68                __malloc_trim_threshold
  *(.rodata)
  *(.rodata.*)
  .rodata._Z27InitLibCurlFunctionPointersv.str1.1
-                0x0000000001807ae4       0x63 Main.o
+                0x0000000001807f6c       0x63 Main.o
  .rodata._Z26InitSocketFunctionPointersv.str1.1
-                0x0000000001807b47       0xdd Main.o
+                0x0000000001807fcf       0xdd Main.o
  .rodata._Z24InitVPadFunctionPointersv.str1.1
-                0x0000000001807c24       0x1b Main.o
+                0x00000000018080ac       0x1b Main.o
  .rodata._Z23InitGX2FunctionPointersv.str1.1
-                0x0000000001807c3f       0x18 Main.o
+                0x00000000018080c7       0x18 Main.o
  .rodata._Z26InitKernelFunctionPointersv.str1.1
-                0x0000000001807c57       0x38 Main.o
+                0x00000000018080df       0x38 Main.o
  .rodata._Z22InitOSFunctionPointersv.str1.1
-                0x0000000001807c8f      0x100 Main.o
+                0x0000000001808117      0x100 Main.o
  .rodata._Z26InitMemoryFunctionPointersv.str1.1
-                0x0000000001807d8f       0xf1 Main.o
+                0x0000000001808217       0xf1 Main.o
  .rodata._Z5_mainv.str1.1
-                0x0000000001807e80        0xd Main.o
- *fill*         0x0000000001807e8d        0x3 
+                0x0000000001808308        0xd Main.o
+ *fill*         0x0000000001808315        0x3 
  .rodata._ZL28read_encoded_value_with_basehjPKhPj
-                0x0000000001807e90       0x34 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_personality.o)
+                0x0000000001808318       0x34 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_personality.o)
  .rodata._ZTSN10__cxxabiv115__forced_unwindE
-                0x0000000001807ec4       0x20 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_exception.o)
-                0x0000000001807ec4                _ZTSN10__cxxabiv115__forced_unwindE
+                0x000000000180834c       0x20 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_exception.o)
+                0x000000000180834c                _ZTSN10__cxxabiv115__forced_unwindE
  .rodata._ZTSN10__cxxabiv119__foreign_exceptionE
-                0x0000000001807ee4       0x24 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_exception.o)
-                0x0000000001807ee4                _ZTSN10__cxxabiv119__foreign_exceptionE
+                0x000000000180836c       0x24 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_exception.o)
+                0x000000000180836c                _ZTSN10__cxxabiv119__foreign_exceptionE
  .rodata._ZTSN10__cxxabiv120__si_class_type_infoE
-                0x0000000001807f08       0x25 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(si_class_type_info.o)
-                0x0000000001807f08                _ZTSN10__cxxabiv120__si_class_type_infoE
- *fill*         0x0000000001807f2d        0x3 
+                0x0000000001808390       0x25 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(si_class_type_info.o)
+                0x0000000001808390                _ZTSN10__cxxabiv120__si_class_type_infoE
+ *fill*         0x00000000018083b5        0x3 
  .rodata._ZTIN10__cxxabiv120__si_class_type_infoE
-                0x0000000001807f30        0xc c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(si_class_type_info.o)
-                0x0000000001807f30                _ZTIN10__cxxabiv120__si_class_type_infoE
+                0x00000000018083b8        0xc c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(si_class_type_info.o)
+                0x00000000018083b8                _ZTIN10__cxxabiv120__si_class_type_infoE
  .rodata._ZTVN10__cxxabiv120__si_class_type_infoE
-                0x0000000001807f3c       0x2c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(si_class_type_info.o)
-                0x0000000001807f3c                _ZTVN10__cxxabiv120__si_class_type_infoE
+                0x00000000018083c4       0x2c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(si_class_type_info.o)
+                0x00000000018083c4                _ZTVN10__cxxabiv120__si_class_type_infoE
  .rodata._ZTSSt9type_info
-                0x0000000001807f68        0xd c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(tinfo.o)
-                0x0000000001807f68                _ZTSSt9type_info
- *fill*         0x0000000001807f75        0x3 
+                0x00000000018083f0        0xd c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(tinfo.o)
+                0x00000000018083f0                _ZTSSt9type_info
+ *fill*         0x00000000018083fd        0x3 
  .rodata._ZTSN10__cxxabiv117__class_type_infoE
-                0x0000000001807f78       0x22 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(class_type_info.o)
-                0x0000000001807f78                _ZTSN10__cxxabiv117__class_type_infoE
- *fill*         0x0000000001807f9a        0x2 
+                0x0000000001808400       0x22 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(class_type_info.o)
+                0x0000000001808400                _ZTSN10__cxxabiv117__class_type_infoE
+ *fill*         0x0000000001808422        0x2 
  .rodata._ZTIN10__cxxabiv117__class_type_infoE
-                0x0000000001807f9c        0xc c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(class_type_info.o)
-                0x0000000001807f9c                _ZTIN10__cxxabiv117__class_type_infoE
+                0x0000000001808424        0xc c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(class_type_info.o)
+                0x0000000001808424                _ZTIN10__cxxabiv117__class_type_infoE
  .rodata._ZTVN10__cxxabiv117__class_type_infoE
-                0x0000000001807fa8       0x2c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(class_type_info.o)
-                0x0000000001807fa8                _ZTVN10__cxxabiv117__class_type_infoE
+                0x0000000001808430       0x2c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(class_type_info.o)
+                0x0000000001808430                _ZTVN10__cxxabiv117__class_type_infoE
  .rodata.read_encoded_value
-                0x0000000001807fd4       0x34 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
+                0x000000000180845c       0x34 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
  .rodata.execute_stack_op
-                0x0000000001808008      0x29c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
+                0x0000000001808490      0x29c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
  .rodata.uw_update_context_1
-                0x00000000018082a4       0x18 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
+                0x000000000180872c       0x18 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
  .rodata.execute_cfa_program
-                0x00000000018082bc       0xc0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
+                0x0000000001808744       0xc0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
  .rodata.uw_frame_state_for
-                0x000000000180837c       0x48 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
+                0x0000000001808804       0x48 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
  .rodata.read_encoded_value_with_base
-                0x00000000018083c4       0x34 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2-fde.o)
+                0x000000000180884c       0x34 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2-fde.o)
  .rodata.terminator.1
-                0x00000000018083f8        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2-fde.o)
+                0x0000000001808880        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2-fde.o)
  .rodata.abort.str1.4
-                0x0000000001808400        0xf c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libsysbase.a(abort.o)
- *fill*         0x000000000180840f        0x1 
+                0x0000000001808888        0xf c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libsysbase.a(abort.o)
+ *fill*         0x0000000001808897        0x1 
  .rodata.AddDevice.str1.4
-                0x0000000001808410        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libsysbase.a(iosupport.o)
+                0x0000000001808898        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libsysbase.a(iosupport.o)
  .rodata.dotab_stdnull
-                0x0000000001808418       0x70 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libsysbase.a(iosupport.o)
-                0x0000000001808418                dotab_stdnull
+                0x00000000018088a0       0x70 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libsysbase.a(iosupport.o)
+                0x00000000018088a0                dotab_stdnull
  *(.bss)
  *(.bss.*)
- .bss._ZL4init  0x0000000001808488        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_globals.o)
+ .bss.instructionBuffer
+                0x0000000001808910      0x400 Main.o
+                0x0000000001808910                instructionBuffer
+ .bss._ZL4init  0x0000000001808d10        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_globals.o)
  .bss._ZL10eh_globals
-                0x0000000001808490        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_globals.o)
+                0x0000000001808d18        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libstdc++.a(eh_globals.o)
  .bss.once_regsizes.0
-                0x0000000001808498        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
+                0x0000000001808d20        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
  .bss.dwarf_reg_size_table
-                0x000000000180849c       0x70 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
- .bss.marker.0  0x000000000180850c        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2-fde.o)
- .bss.once.2    0x0000000001808510        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2-fde.o)
+                0x0000000001808d24       0x70 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2.o)
+ .bss.marker.0  0x0000000001808d94        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2-fde.o)
+ .bss.once.2    0x0000000001808d98        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2-fde.o)
  .bss.object_mutex
-                0x0000000001808514       0x2c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2-fde.o)
+                0x0000000001808d9c       0x2c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2-fde.o)
  .bss.seen_objects
-                0x0000000001808540        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2-fde.o)
+                0x0000000001808dc8        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2-fde.o)
  .bss.unseen_objects
-                0x0000000001808544        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2-fde.o)
+                0x0000000001808dcc        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(unwind-dw2-fde.o)
  .bss.__malloc_current_mallinfo
-                0x0000000001808548       0x28 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libc.a(lib_a-mallocr.o)
-                0x0000000001808548                __malloc_current_mallinfo
+                0x0000000001808dd0       0x28 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libc.a(lib_a-mallocr.o)
+                0x0000000001808dd0                __malloc_current_mallinfo
  *(.sbss)
  *(.sbss.*)
  .sbss.MEMFreeToExpHeap
-                0x0000000001808570        0x4 Main.o
-                0x0000000001808570                MEMFreeToExpHeap
+                0x0000000001808df8        0x4 Main.o
+                0x0000000001808df8                MEMFreeToExpHeap
  .sbss.MEMDestroyExpHeap
-                0x0000000001808574        0x4 Main.o
-                0x0000000001808574                MEMDestroyExpHeap
+                0x0000000001808dfc        0x4 Main.o
+                0x0000000001808dfc                MEMDestroyExpHeap
  .sbss.MEMCreateExpHeapEx
-                0x0000000001808578        0x4 Main.o
-                0x0000000001808578                MEMCreateExpHeapEx
+                0x0000000001808e00        0x4 Main.o
+                0x0000000001808e00                MEMCreateExpHeapEx
  .sbss.MEMAllocFromExpHeapEx
-                0x000000000180857c        0x4 Main.o
-                0x000000000180857c                MEMAllocFromExpHeapEx
+                0x0000000001808e04        0x4 Main.o
+                0x0000000001808e04                MEMAllocFromExpHeapEx
  .sbss.MEMFreeToFrmHeap
-                0x0000000001808580        0x4 Main.o
-                0x0000000001808580                MEMFreeToFrmHeap
+                0x0000000001808e08        0x4 Main.o
+                0x0000000001808e08                MEMFreeToFrmHeap
  .sbss.MEMAllocFromFrmHeapEx
-                0x0000000001808584        0x4 Main.o
-                0x0000000001808584                MEMAllocFromFrmHeapEx
+                0x0000000001808e0c        0x4 Main.o
+                0x0000000001808e0c                MEMAllocFromFrmHeapEx
  .sbss.MEMGetAllocatableSizeForFrmHeapEx
-                0x0000000001808588        0x4 Main.o
-                0x0000000001808588                MEMGetAllocatableSizeForFrmHeapEx
+                0x0000000001808e10        0x4 Main.o
+                0x0000000001808e10                MEMGetAllocatableSizeForFrmHeapEx
  .sbss.MEMGetBaseHeapHandle
-                0x000000000180858c        0x4 Main.o
-                0x000000000180858c                MEMGetBaseHeapHandle
+                0x0000000001808e14        0x4 Main.o
+                0x0000000001808e14                MEMGetBaseHeapHandle
  .sbss.pMEMFreeToDefaultHeap
-                0x0000000001808590        0x4 Main.o
-                0x0000000001808590                pMEMFreeToDefaultHeap
+                0x0000000001808e18        0x4 Main.o
+                0x0000000001808e18                pMEMFreeToDefaultHeap
  .sbss.pMEMAllocFromDefaultHeap
-                0x0000000001808594        0x4 Main.o
-                0x0000000001808594                pMEMAllocFromDefaultHeap
+                0x0000000001808e1c        0x4 Main.o
+                0x0000000001808e1c                pMEMAllocFromDefaultHeap
  .sbss.pMEMAllocFromDefaultHeapEx
-                0x0000000001808598        0x4 Main.o
-                0x0000000001808598                pMEMAllocFromDefaultHeapEx
+                0x0000000001808e20        0x4 Main.o
+                0x0000000001808e20                pMEMAllocFromDefaultHeapEx
  .sbss.OSSetExceptionCallback
-                0x000000000180859c        0x4 Main.o
-                0x000000000180859c                OSSetExceptionCallback
+                0x0000000001808e24        0x4 Main.o
+                0x0000000001808e24                OSSetExceptionCallback
  .sbss.MCP_Close
-                0x00000000018085a0        0x4 Main.o
-                0x00000000018085a0                MCP_Close
+                0x0000000001808e28        0x4 Main.o
+                0x0000000001808e28                MCP_Close
  .sbss.MCP_GetDeviceId
-                0x00000000018085a4        0x4 Main.o
-                0x00000000018085a4                MCP_GetDeviceId
+                0x0000000001808e2c        0x4 Main.o
+                0x0000000001808e2c                MCP_GetDeviceId
  .sbss.MCP_Open
-                0x00000000018085a8        0x4 Main.o
-                0x00000000018085a8                MCP_Open
+                0x0000000001808e30        0x4 Main.o
+                0x0000000001808e30                MCP_Open
  .sbss.OSConsoleWrite
-                0x00000000018085ac        0x4 Main.o
-                0x00000000018085ac                OSConsoleWrite
+                0x0000000001808e34        0x4 Main.o
+                0x0000000001808e34                OSConsoleWrite
  .sbss.OSResumeThread
-                0x00000000018085b0        0x4 Main.o
-                0x00000000018085b0                OSResumeThread
+                0x0000000001808e38        0x4 Main.o
+                0x0000000001808e38                OSResumeThread
  .sbss.OSCreateThread
-                0x00000000018085b4        0x4 Main.o
-                0x00000000018085b4                OSCreateThread
+                0x0000000001808e3c        0x4 Main.o
+                0x0000000001808e3c                OSCreateThread
  .sbss.OSScreenFlipBuffersEx
-                0x00000000018085b8        0x4 Main.o
-                0x00000000018085b8                OSScreenFlipBuffersEx
+                0x0000000001808e40        0x4 Main.o
+                0x0000000001808e40                OSScreenFlipBuffersEx
  .sbss.OSScreenPutFontEx
-                0x00000000018085bc        0x4 Main.o
-                0x00000000018085bc                OSScreenPutFontEx
+                0x0000000001808e44        0x4 Main.o
+                0x0000000001808e44                OSScreenPutFontEx
  .sbss.OSScreenClearBufferEx
-                0x00000000018085c0        0x4 Main.o
-                0x00000000018085c0                OSScreenClearBufferEx
+                0x0000000001808e48        0x4 Main.o
+                0x0000000001808e48                OSScreenClearBufferEx
  .sbss.OSScreenEnableEx
-                0x00000000018085c4        0x4 Main.o
-                0x00000000018085c4                OSScreenEnableEx
+                0x0000000001808e4c        0x4 Main.o
+                0x0000000001808e4c                OSScreenEnableEx
  .sbss.OSScreenSetBufferEx
-                0x00000000018085c8        0x4 Main.o
-                0x00000000018085c8                OSScreenSetBufferEx
+                0x0000000001808e50        0x4 Main.o
+                0x0000000001808e50                OSScreenSetBufferEx
  .sbss.OSScreenGetBufferSizeEx
-                0x00000000018085cc        0x4 Main.o
-                0x00000000018085cc                OSScreenGetBufferSizeEx
+                0x0000000001808e54        0x4 Main.o
+                0x0000000001808e54                OSScreenGetBufferSizeEx
  .sbss.OSScreenShutdown
-                0x00000000018085d0        0x4 Main.o
-                0x00000000018085d0                OSScreenShutdown
+                0x0000000001808e58        0x4 Main.o
+                0x0000000001808e58                OSScreenShutdown
  .sbss.OSScreenInit
-                0x00000000018085d4        0x4 Main.o
-                0x00000000018085d4                OSScreenInit
- .sbss.OSFatal  0x00000000018085d8        0x4 Main.o
-                0x00000000018085d8                OSFatal
+                0x0000000001808e5c        0x4 Main.o
+                0x0000000001808e5c                OSScreenInit
+ .sbss.OSFatal  0x0000000001808e60        0x4 Main.o
+                0x0000000001808e60                OSFatal
  .sbss.OSEffectiveToPhysical
-                0x00000000018085dc        0x4 Main.o
-                0x00000000018085dc                OSEffectiveToPhysical
+                0x0000000001808e64        0x4 Main.o
+                0x0000000001808e64                OSEffectiveToPhysical
  .sbss.DCFlushRange
-                0x00000000018085e0        0x4 Main.o
-                0x00000000018085e0                DCFlushRange
+                0x0000000001808e68        0x4 Main.o
+                0x0000000001808e68                DCFlushRange
  .sbss.GX2WaitForVsync
-                0x00000000018085e4        0x4 Main.o
-                0x00000000018085e4                GX2WaitForVsync
+                0x0000000001808e6c        0x4 Main.o
+                0x0000000001808e6c                GX2WaitForVsync
  .sbss.VPADRead
-                0x00000000018085e8        0x4 Main.o
-                0x00000000018085e8                VPADRead
+                0x0000000001808e70        0x4 Main.o
+                0x0000000001808e70                VPADRead
  .sbss.VPADInit
-                0x00000000018085ec        0x4 Main.o
-                0x00000000018085ec                VPADInit
+                0x0000000001808e74        0x4 Main.o
+                0x0000000001808e74                VPADInit
  .sbss.inet_aton
-                0x00000000018085f0        0x4 Main.o
-                0x00000000018085f0                inet_aton
+                0x0000000001808e78        0x4 Main.o
+                0x0000000001808e78                inet_aton
  .sbss.inet_ntoa
-                0x00000000018085f4        0x4 Main.o
-                0x00000000018085f4                inet_ntoa
+                0x0000000001808e7c        0x4 Main.o
+                0x0000000001808e7c                inet_ntoa
  .sbss.setsockopt
-                0x00000000018085f8        0x4 Main.o
-                0x00000000018085f8                setsockopt
- .sbss.sendto   0x00000000018085fc        0x4 Main.o
-                0x00000000018085fc                sendto
- .sbss.recv     0x0000000001808600        0x4 Main.o
-                0x0000000001808600                recv
- .sbss.send     0x0000000001808604        0x4 Main.o
-                0x0000000001808604                send
- .sbss.accept   0x0000000001808608        0x4 Main.o
-                0x0000000001808608                accept
- .sbss.listen   0x000000000180860c        0x4 Main.o
-                0x000000000180860c                listen
- .sbss.bind     0x0000000001808610        0x4 Main.o
-                0x0000000001808610                bind
- .sbss.connect  0x0000000001808614        0x4 Main.o
-                0x0000000001808614                connect
+                0x0000000001808e80        0x4 Main.o
+                0x0000000001808e80                setsockopt
+ .sbss.sendto   0x0000000001808e84        0x4 Main.o
+                0x0000000001808e84                sendto
+ .sbss.recv     0x0000000001808e88        0x4 Main.o
+                0x0000000001808e88                recv
+ .sbss.send     0x0000000001808e8c        0x4 Main.o
+                0x0000000001808e8c                send
+ .sbss.accept   0x0000000001808e90        0x4 Main.o
+                0x0000000001808e90                accept
+ .sbss.listen   0x0000000001808e94        0x4 Main.o
+                0x0000000001808e94                listen
+ .sbss.bind     0x0000000001808e98        0x4 Main.o
+                0x0000000001808e98                bind
+ .sbss.connect  0x0000000001808e9c        0x4 Main.o
+                0x0000000001808e9c                connect
  .sbss.socketclose
-                0x0000000001808618        0x4 Main.o
-                0x0000000001808618                socketclose
- .sbss.socket   0x000000000180861c        0x4 Main.o
-                0x000000000180861c                socket
+                0x0000000001808ea0        0x4 Main.o
+                0x0000000001808ea0                socketclose
+ .sbss.socket   0x0000000001808ea4        0x4 Main.o
+                0x0000000001808ea4                socket
  .sbss.socket_lib_finish
-                0x0000000001808620        0x4 Main.o
-                0x0000000001808620                socket_lib_finish
+                0x0000000001808ea8        0x4 Main.o
+                0x0000000001808ea8                socket_lib_finish
  .sbss.socket_lib_init
-                0x0000000001808624        0x4 Main.o
-                0x0000000001808624                socket_lib_init
+                0x0000000001808eac        0x4 Main.o
+                0x0000000001808eac                socket_lib_init
  .sbss.hostIpAddress
-                0x0000000001808628        0x4 Main.o
-                0x0000000001808628                hostIpAddress
+                0x0000000001808eb0        0x4 Main.o
+                0x0000000001808eb0                hostIpAddress
  .sbss.curl_slist_append
-                0x000000000180862c        0x4 Main.o
-                0x000000000180862c                curl_slist_append
+                0x0000000001808eb4        0x4 Main.o
+                0x0000000001808eb4                curl_slist_append
  .sbss.curl_easy_setopt
-                0x0000000001808630        0x4 Main.o
-                0x0000000001808630                curl_easy_setopt
+                0x0000000001808eb8        0x4 Main.o
+                0x0000000001808eb8                curl_easy_setopt
  .sbss.curl_easy_perform
-                0x0000000001808634        0x4 Main.o
-                0x0000000001808634                curl_easy_perform
+                0x0000000001808ebc        0x4 Main.o
+                0x0000000001808ebc                curl_easy_perform
  .sbss.curl_easy_cleanup
-                0x0000000001808638        0x4 Main.o
-                0x0000000001808638                curl_easy_cleanup
+                0x0000000001808ec0        0x4 Main.o
+                0x0000000001808ec0                curl_easy_cleanup
  .sbss.curl_easy_init
-                0x000000000180863c        0x4 Main.o
-                0x000000000180863c                curl_easy_init
+                0x0000000001808ec4        0x4 Main.o
+                0x0000000001808ec4                curl_easy_init
+ .sbss.__test_index
+                0x0000000001808ec8        0x4 Main.o
+                0x0000000001808ec8                __test_index
  .sbss.real_instructions
-                0x0000000001808640        0x8 Main.o
-                0x0000000001808640                real_instructions
+                0x0000000001808ecc        0x8 Main.o
+                0x0000000001808ecc                real_instructions
  .sbss.OSDynLoad_FindExport
-                0x0000000001808648        0x4 Main.o
-                0x0000000001808648                OSDynLoad_FindExport
+                0x0000000001808ed4        0x4 Main.o
+                0x0000000001808ed4                OSDynLoad_FindExport
  .sbss.OSDynLoad_Acquire
-                0x000000000180864c        0x4 Main.o
-                0x000000000180864c                OSDynLoad_Acquire
+                0x0000000001808ed8        0x4 Main.o
+                0x0000000001808ed8                OSDynLoad_Acquire
  .sbss.__malloc_max_total_mem
-                0x0000000001808650        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libc.a(lib_a-mallocr.o)
-                0x0000000001808650                __malloc_max_total_mem
+                0x0000000001808edc        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libc.a(lib_a-mallocr.o)
+                0x0000000001808edc                __malloc_max_total_mem
  .sbss.__malloc_max_sbrked_mem
-                0x0000000001808654        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libc.a(lib_a-mallocr.o)
-                0x0000000001808654                __malloc_max_sbrked_mem
+                0x0000000001808ee0        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libc.a(lib_a-mallocr.o)
+                0x0000000001808ee0                __malloc_max_sbrked_mem
  .sbss.__malloc_top_pad
-                0x0000000001808658        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libc.a(lib_a-mallocr.o)
-                0x0000000001808658                __malloc_top_pad
+                0x0000000001808ee4        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libc.a(lib_a-mallocr.o)
+                0x0000000001808ee4                __malloc_top_pad
  *(.data)
  *(.data.*)
  .data._ZL11bucket_heap
-                0x000000000180865c        0x4 Main.o
+                0x0000000001808ee8        0x4 Main.o
  .data._ZL9mem1_heap
-                0x0000000001808660        0x4 Main.o
+                0x0000000001808eec        0x4 Main.o
  .data.__malloc_av_
-                0x0000000001808664      0x408 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libc.a(lib_a-mallocr.o)
-                0x0000000001808664                __malloc_av_
- *fill*         0x0000000001808a6c        0x4 
+                0x0000000001808ef0      0x408 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libc.a(lib_a-mallocr.o)
+                0x0000000001808ef0                __malloc_av_
  .data.impure_data
-                0x0000000001808a70      0x448 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libc.a(lib_a-impure.o)
- .data.handles  0x0000000001808eb8     0x1000 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libsysbase.a(handle_manager.o)
+                0x00000000018092f8      0x448 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libc.a(lib_a-impure.o)
+ .data.handles  0x0000000001809740     0x1000 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libsysbase.a(handle_manager.o)
  .data.__stderr_handle
-                0x0000000001809eb8        0xc c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libsysbase.a(handle_manager.o)
+                0x000000000180a740        0xc c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libsysbase.a(handle_manager.o)
  .data.__stdout_handle
-                0x0000000001809ec4        0xc c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libsysbase.a(handle_manager.o)
+                0x000000000180a74c        0xc c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libsysbase.a(handle_manager.o)
  .data.__stdin_handle
-                0x0000000001809ed0        0xc c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libsysbase.a(handle_manager.o)
+                0x000000000180a758        0xc c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libsysbase.a(handle_manager.o)
  .data.devoptab_list
-                0x0000000001809edc       0x40 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libsysbase.a(iosupport.o)
-                0x0000000001809edc                devoptab_list
+                0x000000000180a764       0x40 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0/../../../../powerpc-eabi/lib\libsysbase.a(iosupport.o)
+                0x000000000180a764                devoptab_list
  *(.ext)
+ .ext           0x000000000180a7a4        0x4 Main.o
+                0x000000000180a7a4                real_ServerPlayer_Swing
  *(.ext.*)
-                0x0000000001809f1c                data_end = .
- .text          0x0000000001809f1c       0x58 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(crtresxgpr.o)
-                0x0000000001809f1c                _restgpr_14_x
-                0x0000000001809f20                _restgpr_15_x
-                0x0000000001809f24                _restgpr_16_x
-                0x0000000001809f28                _restgpr_17_x
-                0x0000000001809f2c                _restgpr_18_x
-                0x0000000001809f30                _restgpr_19_x
-                0x0000000001809f34                _restgpr_20_x
-                0x0000000001809f38                _restgpr_21_x
-                0x0000000001809f3c                _restgpr_22_x
-                0x0000000001809f40                _restgpr_23_x
-                0x0000000001809f44                _restgpr_24_x
-                0x0000000001809f48                _restgpr_25_x
-                0x0000000001809f4c                _restgpr_26_x
-                0x0000000001809f50                _restgpr_27_x
-                0x0000000001809f54                _restgpr_28_x
-                0x0000000001809f58                _restgpr_29_x
-                0x0000000001809f5c                _restgpr_30_x
-                0x0000000001809f60                _restgpr_31_x
+                0x000000000180a7a8                data_end = .
+ .text          0x000000000180a7a8       0x58 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/12.1.0\libgcc.a(crtresxgpr.o)
+                0x000000000180a7a8                _restgpr_14_x
+                0x000000000180a7ac                _restgpr_15_x
+                0x000000000180a7b0                _restgpr_16_x
+                0x000000000180a7b4                _restgpr_17_x
+                0x000000000180a7b8                _restgpr_18_x
+                0x000000000180a7bc                _restgpr_19_x
+                0x000000000180a7c0                _restgpr_20_x
+                0x000000000180a7c4                _restgpr_21_x
+                0x000000000180a7c8                _restgpr_22_x
+                0x000000000180a7cc                _restgpr_23_x
+                0x000000000180a7d0                _restgpr_24_x
+                0x000000000180a7d4                _restgpr_25_x
+                0x000000000180a7d8                _restgpr_26_x
+                0x000000000180a7dc                _restgpr_27_x
+                0x000000000180a7e0                _restgpr_28_x
+                0x000000000180a7e4                _restgpr_29_x
+                0x000000000180a7e8                _restgpr_30_x
+                0x000000000180a7ec                _restgpr_31_x
 OUTPUT(../CodeLib_dbg.elf elf32-powerpc)
 
-.glink          0x0000000001809f74        0x0
- .glink         0x0000000001809f74        0x0 Main.o
+.glink          0x000000000180a800        0x0
+ .glink         0x000000000180a800        0x0 Main.o
 
-.branch_lt      0x0000000001809f74        0x0
- .branch_lt     0x0000000001809f74        0x0 Main.o
+.branch_lt      0x000000000180a800        0x0
+ .branch_lt     0x000000000180a800        0x0 Main.o
 
-.rela.dyn       0x0000000001809f74        0x0
- .rela.iplt     0x0000000001809f74        0x0 Main.o
+.rela.dyn       0x000000000180a800        0x0
+ .rela.iplt     0x000000000180a800        0x0 Main.o
  .rela.text.__gxx_personality_v0
-                0x0000000001809f74        0x0 Main.o
+                0x000000000180a800        0x0 Main.o
  .rela.sdata._ZTIN10__cxxabiv115__forced_unwindE
-                0x0000000001809f74        0x0 Main.o
+                0x000000000180a800        0x0 Main.o
  .rela.sdata._ZTIN10__cxxabiv119__foreign_exceptionE
-                0x0000000001809f74        0x0 Main.o
+                0x000000000180a800        0x0 Main.o
  .rela.text._ZN10__cxxabiv120__si_class_type_infoD2Ev
-                0x0000000001809f74        0x0 Main.o
+                0x000000000180a800        0x0 Main.o
  .rela.text._ZN10__cxxabiv120__si_class_type_infoD0Ev
-                0x0000000001809f74        0x0 Main.o
+                0x000000000180a800        0x0 Main.o
  .rela.rodata._ZTIN10__cxxabiv120__si_class_type_infoE
-                0x0000000001809f74        0x0 Main.o
+                0x000000000180a800        0x0 Main.o
  .rela.rodata._ZTVN10__cxxabiv120__si_class_type_infoE
-                0x0000000001809f74        0x0 Main.o
+                0x000000000180a800        0x0 Main.o
  .rela.sdata._ZTISt9type_info
-                0x0000000001809f74        0x0 Main.o
+                0x000000000180a800        0x0 Main.o
  .rela.text._ZN10__cxxabiv117__class_type_infoD2Ev
-                0x0000000001809f74        0x0 Main.o
+                0x000000000180a800        0x0 Main.o
  .rela.text._ZN10__cxxabiv117__class_type_infoD0Ev
-                0x0000000001809f74        0x0 Main.o
+                0x000000000180a800        0x0 Main.o
  .rela.rodata._ZTIN10__cxxabiv117__class_type_infoE
-                0x0000000001809f74        0x0 Main.o
+                0x000000000180a800        0x0 Main.o
  .rela.rodata._ZTVN10__cxxabiv117__class_type_infoE
-                0x0000000001809f74        0x0 Main.o
+                0x000000000180a800        0x0 Main.o
  .rela.text.__gthread_once
-                0x0000000001809f74        0x0 Main.o
+                0x000000000180a800        0x0 Main.o
  .rela.text.__gthread_getspecific
-                0x0000000001809f74        0x0 Main.o
+                0x000000000180a800        0x0 Main.o
  .rela.text.__gthread_setspecific
-                0x0000000001809f74        0x0 Main.o
+                0x000000000180a800        0x0 Main.o
  .rela.text.__gthread_mutex_init_function
-                0x0000000001809f74        0x0 Main.o
+                0x000000000180a800        0x0 Main.o
  .rela.text.__gthread_mutex_lock
-                0x0000000001809f74        0x0 Main.o
+                0x000000000180a800        0x0 Main.o
  .rela.text.__gthread_mutex_unlock
-                0x0000000001809f74        0x0 Main.o
+                0x000000000180a800        0x0 Main.o
  .rela.text._exit
-                0x0000000001809f74        0x0 Main.o
+                0x000000000180a800        0x0 Main.o
  .rela.text._sbrk_r
-                0x0000000001809f74        0x0 Main.o
+                0x000000000180a800        0x0 Main.o
  .rela.text.__malloc_lock
-                0x0000000001809f74        0x0 Main.o
+                0x000000000180a800        0x0 Main.o
  .rela.text.__malloc_unlock
-                0x0000000001809f74        0x0 Main.o
+                0x000000000180a800        0x0 Main.o
 
-.iplt           0x0000000001809f80        0x0
- .iplt          0x0000000001809f80        0x0 Main.o
+.iplt           0x000000000180a800        0x0
+ .iplt          0x000000000180a800        0x0 Main.o
 
 .comment        0x0000000000000000       0x23
  .comment       0x0000000000000000       0x23 Main.o
