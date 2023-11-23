@@ -18,5 +18,7 @@ namespace mc {
         MC_VFUNC(void, struct Entity, setDropContainerContent__6EntityFb);
         MC_VFUNC(void, struct Entity, setSize__6EntityFfT1);
         MC_VFUNC(void, struct Entity, setPos__6EntityFdN21);
+        MC_VFUNC(void, struct Entity, tick__6EntityFv);
+        MC_VFUNC(void, struct Entity, baseTick__6EntityFv);
     };
 }

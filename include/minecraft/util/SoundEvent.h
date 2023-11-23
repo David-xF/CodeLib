@@ -120,15 +120,15 @@ namespace mc {
             code::Func<void, 0x028E11EC, SoundEvent*, const mstd::wstring&>()(this, name);
         }
 
-        static float getPitch(int count) {
+        static float getNoteBlockPitch(int count) {
             switch (count) {
+            case 0:
+                return 0.5f;
             case 12:
                 return 1.0f;
             default:
                 return powf(2, (-12 + mc::toFloat(count)) / 12);
             };
-
-            return 1.0f / 2.0f;
         }
     };
 }

@@ -17,9 +17,9 @@ namespace mc {
             return code::Func<int, 0x02692df0, MobEffectInstance*>()(this);
         }
 
-        uint32_t field_0x0;
-        uint32_t duration;
-        uint32_t amplifier;
+        struct MobEffect* effect;
+        int duration;
+        int amplifier;
         bool field_0xC;
         bool field_0xD;
         bool ambient;
