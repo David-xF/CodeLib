@@ -102,6 +102,7 @@
 #include "util/ClickType.h"
 #include "util/DamageSource.h"
 #include "util/Direction.h"
+#include "util/EntityTickCache.h"
 #include "util/ePARTICLE_TYPE.h"
 #include "util/FloatConverter.h"
 #include "util/FoodData.h"

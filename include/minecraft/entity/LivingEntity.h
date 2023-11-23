@@ -46,7 +46,7 @@ namespace mc {
 		}
 
         uint32_t field_0x350;
-		uint32_t field_0x354;
+		struct CombatTracker* field_0x354;
 		uint32_t field_0x358;
 		uint32_t field_0x35C;
 		double field_0x360;
@@ -106,14 +106,7 @@ namespace mc {
 		uint32_t field_0x444;
 		uint32_t field_0x448;
 		uint32_t field_0x44C;
-		uint32_t field_0x450;
-		uint32_t field_0x454;
-		uint32_t field_0x458;
-		uint32_t field_0x45C;
-		uint32_t field_0x460;
-		uint32_t field_0x464;
-		uint32_t field_0x468;
-		uint32_t field_0x46C;
+		mstd::wstring field_0x450;
 		uint32_t field_0x470;
 		uint32_t field_0x474;
 		uint32_t field_0x478;

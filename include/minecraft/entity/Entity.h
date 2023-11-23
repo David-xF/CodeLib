@@ -231,7 +231,7 @@ namespace mc {
 		uint32_t skinAnim;
 		uint32_t field_0x33C;
 		uint32_t field_0x340;
-		int tickCount; // bge 0x14 | tickCount = 0 
+		int field_0x344; // bge 0x14 | field_0x344 = 0 
 		struct VTable_Entity* vtable;
 		uint32_t field_0x34C;
     };
