@@ -48,6 +48,7 @@ Main.o: C:/Users/David/Documents/Workspace/CodeLib/Main.cpp \
  C:/Users/David/Documents/Workspace/CodeLib/include/minecraft/entity/player/Player.h \
  c:\users\david\documents\workspace\codelib\include\minecraft\entity\livingentity.h \
  c:\users\david\documents\workspace\codelib\include\minecraft\entity\Entity.h \
+ c:\users\david\documents\workspace\codelib\include\minecraft\util\entitytickcache.h \
  c:\users\david\documents\workspace\codelib\include\minecraft\util\vec3.h \
  c:\users\david\documents\workspace\codelib\include\minecraft\util\FloatConverter.h \
  C:/Users/David/Documents/Workspace/CodeLib/include/minecraft/entity/player/PlayerUID.h \
@@ -165,6 +166,7 @@ C:/Users/David/Documents/Workspace/CodeLib/include/minecraft/entity/player/Local
 C:/Users/David/Documents/Workspace/CodeLib/include/minecraft/entity/player/Player.h:
 c:\users\david\documents\workspace\codelib\include\minecraft\entity\livingentity.h:
 c:\users\david\documents\workspace\codelib\include\minecraft\entity\Entity.h:
+c:\users\david\documents\workspace\codelib\include\minecraft\util\entitytickcache.h:
 c:\users\david\documents\workspace\codelib\include\minecraft\util\vec3.h:
 c:\users\david\documents\workspace\codelib\include\minecraft\util\FloatConverter.h:
 C:/Users/David/Documents/Workspace/CodeLib/include/minecraft/entity/player/PlayerUID.h:

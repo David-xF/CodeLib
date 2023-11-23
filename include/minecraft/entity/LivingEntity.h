@@ -77,10 +77,10 @@ namespace mc {
 		uint32_t field_0x3D0;
 		uint32_t field_0x3D4;
 		uint32_t field_0x3D8;
-		uint32_t field_0x3DC;
+		float field_0x3DC;
 		uint32_t field_0x3E0;
 		uint32_t field_0x3E4;
-		uint32_t field_0x3E8;
+		float field_0x3E8;
 		uint32_t field_0x3EC;
 		uint32_t field_0x3F0;
 		uint32_t field_0x3F4;
@@ -160,9 +160,7 @@ namespace mc {
 		uint32_t field_0x51C;
 		uint32_t bowPower; // IDK has something to do with Bows i guess
 		int anotherTickCount; // idk
-		uint32_t field_0x528;
-		uint32_t field_0x52C;
-		uint32_t field_0x530;
+		BlockPos field_0x528;
 		uint32_t field_0x534;
 		uint32_t field_0x538;
 		uint32_t field_0x53C;
