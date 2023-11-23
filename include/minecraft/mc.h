@@ -33,6 +33,9 @@
 #include "container/Inventory.h"
 #include "container/SimpleContainer.h"
 
+#include "entity/effect/MobEffect.h"
+#include "entity/effect/MobEffectInstance.h"
+
 #include "entity/player/LocalPlayer.h"
 #include "entity/player/Player.h"
 #include "entity/player/PlayerUID.h"

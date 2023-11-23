@@ -42,6 +42,8 @@ Main.o: C:/Users/David/Documents/Workspace/CodeLib/Main.cpp \
  C:/Users/David/Documents/Workspace/CodeLib/include/minecraft/container/Container.h \
  C:/Users/David/Documents/Workspace/CodeLib/include/minecraft/container/Inventory.h \
  C:/Users/David/Documents/Workspace/CodeLib/include/minecraft/container/SimpleContainer.h \
+ C:/Users/David/Documents/Workspace/CodeLib/include/minecraft/entity/effect/MobEffect.h \
+ C:/Users/David/Documents/Workspace/CodeLib/include/minecraft/entity/effect/MobEffectInstance.h \
  C:/Users/David/Documents/Workspace/CodeLib/include/minecraft/entity/player/LocalPlayer.h \
  C:/Users/David/Documents/Workspace/CodeLib/include/minecraft/entity/player/Player.h \
  c:\users\david\documents\workspace\codelib\include\minecraft\entity\livingentity.h \
@@ -157,6 +159,8 @@ C:/Users/David/Documents/Workspace/CodeLib/include/minecraft/container/AbstractC
 C:/Users/David/Documents/Workspace/CodeLib/include/minecraft/container/Container.h:
 C:/Users/David/Documents/Workspace/CodeLib/include/minecraft/container/Inventory.h:
 C:/Users/David/Documents/Workspace/CodeLib/include/minecraft/container/SimpleContainer.h:
+C:/Users/David/Documents/Workspace/CodeLib/include/minecraft/entity/effect/MobEffect.h:
+C:/Users/David/Documents/Workspace/CodeLib/include/minecraft/entity/effect/MobEffectInstance.h:
 C:/Users/David/Documents/Workspace/CodeLib/include/minecraft/entity/player/LocalPlayer.h:
 C:/Users/David/Documents/Workspace/CodeLib/include/minecraft/entity/player/Player.h:
 c:\users\david\documents\workspace\codelib\include\minecraft\entity\livingentity.h:

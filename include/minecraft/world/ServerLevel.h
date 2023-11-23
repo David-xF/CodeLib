@@ -25,8 +25,8 @@ namespace mc {
             code::Func<void, 0x032C06DC, ServerLevel*, const mc_boost::shared_ptr<struct Entity>&>()(this, entity);
         }
 
-        void addGlobalEntity(mc_boost::shared_ptr<struct Entity> entity) {
-            code::Func<void, 0x032ba450, ServerLevel*, mc_boost::shared_ptr<struct Entity>>()(this, entity);
+        void addGlobalEntity(const mc_boost::shared_ptr<struct Entity>& entity) {
+            code::Func<void, 0x032ba450, ServerLevel*, const mc_boost::shared_ptr<struct Entity>&>()(this, entity);
         }
     };
 }

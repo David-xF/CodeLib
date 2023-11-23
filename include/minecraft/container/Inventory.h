@@ -59,7 +59,7 @@ namespace mc {
         uint32_t field_0x60;
         uint32_t field_0x64;
         uint32_t field_0x68;
-        uint32_t idk;
+        int selectedSlot; // from 0 - 8
         uint32_t field_0x70;
         uint32_t field_0x74;
         uint32_t field_0x78;

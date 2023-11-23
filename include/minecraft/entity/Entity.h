@@ -130,7 +130,7 @@ namespace mc {
 		uint32_t field_0x18C;
 		uint32_t field_0x190;
 		uint32_t field_0x194;
-		uint32_t field_0x198;
+		float field_0x198;
 		float eyeHeight;
 		uint32_t field_0x1A0;
 		uint32_t field_0x1A4;

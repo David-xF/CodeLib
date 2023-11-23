@@ -16,8 +16,13 @@ namespace mc {
             return code::Func<int, 0x032A868C, PlayerList*>()(this);
         }
 
-		void broadcastAll(mc_boost::shared_ptr<struct Packet> packet) {
-			code::Func<void, 0x03286804, PlayerList*, mc_boost::shared_ptr<struct Packet>>()(this, packet);
+		void broadcastAll(const mc_boost::shared_ptr<struct Packet>& packet) {
+			code::Func<void, 0x03286804, PlayerList*, const mc_boost::shared_ptr<struct Packet>&>()(this, packet);
+		}
+
+		static code::Func<void, 0x032a53fc, PlayerList*> _tick;
+		void tick() {
+			_tick(this);
 		}
 
         mstd::vector<mc_boost::shared_ptr<struct ServerPlayer>> players;

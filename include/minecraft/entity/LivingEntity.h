@@ -37,16 +37,21 @@ namespace mc {
 			return code::Func<struct MobEffectInstance*, 0x0257822c, LivingEntity*, struct MobEffect*>()(this, effect);
 		}
 
+		int getFallFlyingTicks() {
+			return code::Func<int, 0x0258dae0, LivingEntity*>()(this);
+		}
+
+		void addEffect(struct MobEffectInstance* effect) {
+			code::Func<void, 0x0257840C, LivingEntity*, struct MobEffectInstance*>()(this, effect);
+		}
+
         uint32_t field_0x350;
 		uint32_t field_0x354;
 		uint32_t field_0x358;
 		uint32_t field_0x35C;
-		uint32_t field_0x360;
-		uint32_t field_0x364;
-		uint32_t field_0x368;
-		uint32_t field_0x36C;
-		uint32_t field_0x370;
-		uint32_t field_0x374;
+		double field_0x360;
+		double field_0x368;
+		double field_0x370;
 		uint32_t field_0x378;
 		uint32_t field_0x37C;
 		uint32_t field_0x380;

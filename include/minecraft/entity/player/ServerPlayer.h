@@ -18,6 +18,21 @@ namespace mc {
             code::Func<void, 0x03286798, ServerPlayer*>()(this); 
         }
 
+        static code::Func<void, 0x032c3114, ServerPlayer*> _tick;
+        void tick() {
+            _tick(this);
+        }
+
+        static code::Func<void, 0x032d8b5c, ServerPlayer*, InteractionHand::EInteractionHand> _swing;
+        void swing(InteractionHand::EInteractionHand hand) {
+            _swing(this, hand);
+        }
+
+        static code::Func<void, 0x032d8a3c, ServerPlayer*, const mc_boost::shared_ptr<Entity>&> _attack;
+        void attack(const mc_boost::shared_ptr<Entity>& entity) {
+            _attack(this, entity);
+        }
+
         bool isSpectator() {
             return code::Func<bool, 0x032d8000, ServerPlayer*>()(this);   
         }

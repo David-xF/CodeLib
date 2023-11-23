@@ -43,6 +43,7 @@ DECL_HOOK(onFrameInGame, void) {
         void* curl = curl_easy_init();
         if (curl) {
             xf::String<char> str = "";
+             // Use HTTP with Port 80, Don't use HTTPS because Curl doesn't use SSL Certificates
             curl_easy_setopt(curl, CURLOPT_URL, "http://david-xf.de/logs");
             curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, (void*) WriteCallback);
             curl_easy_setopt(curl, CURLOPT_FILE, &str);
