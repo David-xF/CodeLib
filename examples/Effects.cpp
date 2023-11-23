@@ -37,6 +37,8 @@ DECL_FUNCTION(void, ServerPlayer_tick, mc::ServerPlayer* player) {
         effectInstance->amplifier = 0; // 0 = Level 1 | 1 = Level 2... 
         effectInstance->duration = 30 * 20; // 30 Seconds
         effectInstance->visible = false; // Not Visible
+
+        // Must be ServerPlayer (NOT LocalPlayer)
         player->addEffect(effectInstance);
         
         wchar_t temp[0xA0];
