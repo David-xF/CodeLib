@@ -31,16 +31,16 @@ void init() {
 DECL_FUNCTION(void, ServerPlayer_tick, mc::ServerPlayer* player) {
     real_ServerPlayer_tick(player);
 
-    int effectId = 1; // Speed
-    if (!player->hasEffect(mc::MobEffect::byId(effectId))) {
-        mc::MobEffectInstance* eff = new mc::MobEffectInstance(mc::MobEffect::byId(effectId));
-        eff->amplifier = 0; // 0 = Level 1 | 1 = Level 2... 
-        eff->duration = 30 * 20; // 30 Seconds
-        eff->visible = false; // Not Visible
-        player->addEffect(eff);
+    mc::MobEffect* effect = mc::MobEffect::byId(1); // Speed
+    if (!player->hasEffect(effect)) {
+        mc::MobEffectInstance* effectInstance = new mc::MobEffectInstance(effect);
+        effectInstance->amplifier = 0; // 0 = Level 1 | 1 = Level 2... 
+        effectInstance->duration = 30 * 20; // 30 Seconds
+        effectInstance->visible = false; // Not Visible
+        player->addEffect(effectInstance);
         
         wchar_t temp[0xA0];
-        mc_swprintf(temp, 0xA0, L"Gave you Effect %ls", getEffectName(1));
+        mc_swprintf(temp, 0xA0, L"Gave you Effect %ls", getEffectName(effect->getId()));
         player->listener->send(new mc::ClientboundChatPacket(temp));
     }
 }

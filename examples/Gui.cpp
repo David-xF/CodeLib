@@ -33,12 +33,14 @@ void init() {
 DECL_HOOK(onFrameInGame, void) {
     xf::GUI::DrawHelper::renderSetup();
     mc::Font* font = mc::Minecraft::getInstance()->defaultFonts;
+    // Display "Hello World" at x = 5, y = 5, with color white [Format ARGB]
     xf::GUI::DrawHelper::DisplayText(font, L"Hello World", 1.0f, 5, 5, 0xFFFFFFFF);
 }
 
 DECL_HOOK(onFrameInMenu, void) {
     xf::GUI::DrawHelper::renderSetup();
     mc::Font* font = mc::Minecraft::getInstance()->defaultFonts;
+    // Display "Hello World" at x = 5, y = 5, with color white [Format ARGB]
     xf::GUI::DrawHelper::DisplayText(font, L"Hello World", 1.0f, 5, 5, 0xFFFFFFFF);
 }
 

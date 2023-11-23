@@ -38,6 +38,8 @@ DECL_FUNCTION(bool, executeClickCommands__15SignBlockEntityFQ2_5boost25shared_pt
 
     if (!sPlayer) return true;
     
+    // What to do when the Sign gets clicked
+
     return true;
 }
 

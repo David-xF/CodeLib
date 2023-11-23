@@ -33,6 +33,7 @@ int swkbd_callback(void* data, bool unk) {
     wchar_t buff[17];
     mc::CInput::GetInput()->GetText(buff, 17);
 
+    // Override the NNID Address, with input from Keyboard
     mc_swprintf(nnidAddr, 17, L"%ls", buff);
     mc_printf(L"[NNID] Changed NNID to %ls", buff);
     return 0;
