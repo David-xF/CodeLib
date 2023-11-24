@@ -1,5 +1,5 @@
 # CodeLib
-This is a Code Library for the Minecraft Wii U Edition, on the [`Cemu Emulator`](https://github.com/cemu-project/Cemu).
+This is a Code Library for the Minecraft Wii U Edition, for the [`Cemu Emulator`](https://github.com/cemu-project/Cemu).
 
 # Discord
 The Discord Server can be Accessed here https://david-xf.de/discord or https://discord.com/invite/xumaYBBhJv
