@@ -11,3 +11,6 @@ If any Button Checks don't Work, you might have the Wrong Input Settings set, pl
 
 # Contributors
 [`David xF`](https://github.com/David-xF), [`literallyuki`](https://github.com/literallyuki), [`Syoch`](https://github.com/Syoch), [`xenona (xenrelle)`](https://github.com/xenrelle), [`Miku666`](https://github.com/NessieHax), [`PhoenixARC`](https://github.com/PhoenixARC)
+
+# Building
+You need to have [`devkitPro`](https://devkitpro.org/wiki/Getting_Started) and [`Python`](https://www.python.org/) Installed. After that You can build this with the Command `make all`.
