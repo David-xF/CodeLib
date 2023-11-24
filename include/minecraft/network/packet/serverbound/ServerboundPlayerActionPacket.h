@@ -9,7 +9,7 @@
 namespace mc {
     class ServerboundPlayerActionPacket : public Packet {
     public:
-        enum Action {
+        enum Action : int {
             START_BREAKING, STOP_BREAKING, FINISH_BREAKING, DROP_ALL, DROP_SINGLE, RELEASE, SWAP_HANDS
         };
 

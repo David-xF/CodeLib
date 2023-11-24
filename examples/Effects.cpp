@@ -39,7 +39,7 @@ DECL_FUNCTION(void, ServerPlayer_tick, mc::ServerPlayer* player) {
         effectInstance->visible = false; // Not Visible
 
         // Must be ServerPlayer (NOT LocalPlayer)
-        player->addEffect(effectInstance);
+        player->addEffect(effectInstance, nullptr);
         
         wchar_t temp[0xA0];
         mc_swprintf(temp, 0xA0, L"Gave you Effect %ls", getEffectName(effect->getId()));

@@ -22,6 +22,10 @@ namespace mc {
             );
         }
 
+        AABB(Vec3 _min, Vec3 _max) {
+            code::Func<void, 0x0200c920, AABB*, double, double, double, double, double, double>()(this, _min.x, _min.y, _min.z, _max.x, _max.y, _max.z);
+        }
+
         void set(const AABB* aabb) {
             code::Func<void, 0x0200cf7c, AABB*, const AABB*>()(this, aabb);
         }

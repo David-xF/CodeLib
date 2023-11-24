@@ -11,7 +11,7 @@
 
 #define CURL_ERROR_SIZE 256
 
-enum CURLOption {
+enum CURLOption : int {
     CINIT(FILE,          OBJECTPOINT,    1),
     CINIT(URL,           OBJECTPOINT,    2),
     CINIT(PORT,          LONG,           3),

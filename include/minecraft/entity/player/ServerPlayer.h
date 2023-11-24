@@ -65,6 +65,10 @@ namespace mc {
             code::Func<void, 0x032a2264, ServerPlayer*, struct AbstractContainerMenu*>()(this, _container);
         }
 
+        void addEffect(struct MobEffectInstance* effect, const mc_boost::shared_ptr<Entity>& entity) {
+            code::Func<void, 0x032c6fd8, ServerPlayer*, struct MobEffectInstance*, const mc_boost::shared_ptr<Entity>&>()(this, effect, entity);
+        }
+
         struct ServerPlayerGameMode* gamemode;
         struct ServerGamePacketListenerImpl* listener;
         uint32_t field_0x874;
