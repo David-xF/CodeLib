@@ -79,7 +79,7 @@ DECL_FUNCTION(void, LevelRenderer_renderEntities, void* c, const mc_boost::share
     // Draws a Red Cube with Half Transparency at (0, 50, 5)
     xf::GUI::DrawHelper::DisplayBox3D(0, 50, 5, 1, 1, 1, 0xFF0000, 0xFF / 2, true);
 
-    // Draaws a Purple Line Box at (0, 50, -5)
+    // Draws a Purple Line Box at (0, 50, -5)
     drawLineBox({{0, 50, -5}, {1, 1, 1}}, 0xFF00FF, 0xFF);
 
     mc::GlStateManager::disableBlend();
