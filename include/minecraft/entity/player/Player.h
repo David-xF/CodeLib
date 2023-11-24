@@ -119,9 +119,12 @@ namespace mc {
 		uint32_t field_0x698;
 		uint32_t field_0x69C;
 		mstd::wstring _name;
-		uint32_t field_0x6C0;
+		bool isSleeping;
+		bool field_0x6C1;
+		bool field_0x6C2;
+		bool field_0x6C3;
 		uint32_t field_0x6C4;
-		uint32_t field_0x6C8;
+		int sleeptimer; // max 0x64
 		uint32_t field_0x6CC;
 		uint32_t field_0x6D0;
 		uint32_t field_0x6D4;
@@ -197,8 +200,8 @@ namespace mc {
     	float field_0x848;
     	float field_0x84C;
 		uint32_t field_0x850;
-		uint32_t field_0x854;
-		uint32_t field_0x858;
+		float field_0x854; // Underwater Light Level
+		float field_0x858; // Underwater Vision Scale
 		uint32_t field_0x85C;
 		uint32_t field_0x860;
 		uint32_t field_0x864;

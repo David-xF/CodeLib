@@ -126,9 +126,9 @@ namespace mc {
         uint32_t field_0x140;
         uint32_t field_0x144;
         uint32_t field_0x148;
-        uint32_t field_0x14C;
+        struct LevelStorage* field_0x14C;
         uint32_t field_0x150;
-        uint32_t field_0x154;
+        struct LevelData* field_0x154;
         uint32_t field_0x158;
         uint32_t field_0x15C;
         uint32_t field_0x160;

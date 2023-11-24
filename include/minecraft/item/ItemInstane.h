@@ -2,30 +2,27 @@
 
 #include <code/code.h>
 
-#include "Item.h"
-#include "../nbt/CompundTag.h"
-
 namespace mc {
     class ItemInstance {
     public:
-        ItemInstance(Item* item, int amount) {
-            code::Func<void, 0x024861BC, ItemInstance*, Item*, int>()(this, item, amount);
+        ItemInstance(struct Item* item, int amount) {
+            code::Func<void, 0x024861BC, ItemInstance*, struct Item*, int>()(this, item, amount);
         }
 
-        ItemInstance(Item* item, int amount, int aux) {
-            code::Func<void, 0x024862d0, ItemInstance*, Item*, int, int>()(this, item, amount, aux);
+        ItemInstance(struct Item* item, int amount, int aux) {
+            code::Func<void, 0x024862d0, ItemInstance*, struct Item*, int, int>()(this, item, amount, aux);
         }
 
         void setAuxValue(int val) {
             code::Func<void, 0x02488B2C, ItemInstance*, int>()(this, val);
         }
 
-        CompoundTag* getTag() {
-            return code::Func<CompoundTag*, 0x02488888, ItemInstance*>()(this);
+        struct CompoundTag* getTag() {
+            return code::Func<struct CompoundTag*, 0x02488888, ItemInstance*>()(this);
         }
 
-        void setTag(CompoundTag* _tag) {
-            code::Func<void, 0x0248e080, ItemInstance*, CompoundTag*>()(this, _tag);
+        void setTag(struct CompoundTag* _tag) {
+            code::Func<void, 0x0248e080, ItemInstance*, struct CompoundTag*>()(this, _tag);
         }
 
         bool hasTag() {
@@ -42,12 +39,12 @@ namespace mc {
 
         uint32_t field_0x0;
         uint32_t field_0x4;
-        uint32_t count; // i think
+        int count; // i think
         uint32_t field_0xC;
-        Item* item;
-        CompoundTag* tag;
+        struct Item* item;
+        struct CompoundTag* tag;
         uint32_t field_0x18;
-        uint32_t aux;
+        int aux;
         uint32_t field_0x20;
         uint32_t field_0x24;
         uint32_t field_0x28;
