@@ -45,7 +45,7 @@ void openNNIDChangeKeyboard() {
 }
 
 DECL_HOOK(onFrameInGame, void) {
-    START_BUTTONCHECK(button & VPAD_BUTTON_RIGHT, openNNIDChangeKeyboard, button)
+    START_BUTTONCHECK(button & VPAD_BUTTON_RIGHT, openNNIDChangeKeyboard(), button)
     END_BUTTONCHECK()
 }
 
