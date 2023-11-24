@@ -116,7 +116,8 @@ Main.o: C:/Users/David/Documents/Workspace/CodeLib/Main.cpp \
  C:/Users/David/Documents/Workspace/CodeLib/include/minecraft/util/VTable_Item.h \
  C:/Users/David/Documents/Workspace/CodeLib/include/minecraft/world/gamemode/ServerPlayerGameMode.h \
  C:/Users/David/Documents/Workspace/CodeLib/include/minecraft/world/Level.h \
- C:/Users/David/Documents/Workspace/CodeLib/include/minecraft/world/ServerLevel.h
+ C:/Users/David/Documents/Workspace/CodeLib/include/minecraft/world/ServerLevel.h \
+ C:/Users/David/Documents/Workspace/CodeLib/include/xf/ItemInstanceHelper.h
 C:/Users/David/Documents/Workspace/CodeLib/include/code/code.h:
 C:/Users/David/Documents/Workspace/CodeLib/include/code/mem.h:
 C:/Users/David/Documents/Workspace/CodeLib/include/code/Func.h:
@@ -235,3 +236,4 @@ C:/Users/David/Documents/Workspace/CodeLib/include/minecraft/util/VTable_Item.h:
 C:/Users/David/Documents/Workspace/CodeLib/include/minecraft/world/gamemode/ServerPlayerGameMode.h:
 C:/Users/David/Documents/Workspace/CodeLib/include/minecraft/world/Level.h:
 C:/Users/David/Documents/Workspace/CodeLib/include/minecraft/world/ServerLevel.h:
+C:/Users/David/Documents/Workspace/CodeLib/include/xf/ItemInstanceHelper.h:
