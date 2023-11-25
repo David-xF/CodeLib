@@ -74,13 +74,13 @@ DECL_FUNCTION(void, LevelRenderer_renderEntities, void* c, const mc_boost::share
     mc::GlStateManager::blendFunc(4, 5);
     mc::GlStateManager::disableFog();
     
-    // Draws a White Cube at (0, 50, 0)
+    // Draws a White Cube at (0, 50, 0) with size (1, 1, 1)
     xf::GUI::DrawHelper::DisplayBox3D(0, 50, 0, 1, 1, 1, 0xFFFFFF, 0xFF, true); // Must be set to True
-    // Draws a Red Cube with Half Transparency at (0, 50, 5)
+    // Draws a Red Cube with Half Transparency at (0, 50, 5) with size (1, 1, 1)
     xf::GUI::DrawHelper::DisplayBox3D(0, 50, 5, 1, 1, 1, 0xFF0000, 0xFF / 2, true);
 
-    // Draws a Purple Line Box at (0, 50, -5)
-    drawLineBox({{0, 50, -5}, {1, 1, 1}}, 0xFF00FF, 0xFF);
+    // Draws a Purple Line Box at (0, 50, -5) with size (1, 1, 1)
+    drawLineBox({{0, 50, -5}, {1, 51, -4}}, 0xFF00FF, 0xFF);
 
     mc::GlStateManager::disableBlend();
     mc::GlStateManager::enableCull();
