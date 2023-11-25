@@ -2,7 +2,7 @@
 
 namespace mstd {
     template<typename T1, typename T2>
-    class pair {
+    struct pair {
     public:
         T1 t1;
         T2 t2;

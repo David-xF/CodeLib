@@ -106,7 +106,7 @@ namespace xf {
         T& front() { return data[0]; }
         T& back()  { return data[length - 1]; }
 
-        const T& operator[](int index) { 
+        T& operator[](int index) { 
             if (0 > index) return data[length + index];
             return data[index]; 
         }

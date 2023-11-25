@@ -29,7 +29,7 @@ void init() {
 }
 
 namespace mc {
-    VTable_Item* TestItem_default_vtbl;
+    VTable_Item* TestItem_default_vtbl = nullptr;
     class TestItem : public BowItem {
     public:
         TestItem() : BowItem() {
@@ -37,28 +37,61 @@ namespace mc {
                 TestItem_default_vtbl = (VTable_Item*) new uint8_t[sizeof(VTable_Item)];
                 memcpy(TestItem_default_vtbl, BowItem::default_vtbl, sizeof(VTable_Item));
                 TestItem_default_vtbl->releaseUsing = &TestItem::releaseUsing;
+                TestItem_default_vtbl->hurtEnemy = &TestItem::hurtEnemy;
+                TestItem_default_vtbl->mineBlock = &TestItem::mineBlock;
             }
 
             vtbl = TestItem_default_vtbl;
-            wchar_t _iconName[0x40];
-            mc::Item* bowItem = Item::byId(BowItem::default_itemId);
-            mc_swprintf(_iconName, 0x40, L"%ls", bowItem->iconName.c_str());
-            iconName = _iconName;
-
-            unk_str = bowItem->unk_str.c_str();
+            iconName = Item::byId(BowItem::default_itemId)->iconName.c_str();
         }
 
-        static Item* releaseUsing(mc::Item* _this, const mc_boost::shared_ptr<struct ItemInstance>& instance, struct Level* level, const mc_boost::shared_ptr<struct LivingEntity>& entity, int duration) {
-            mc_printf(L"Release Using");
+        static Item* releaseUsing(Item* _this, const mc_boost::shared_ptr<struct ItemInstance>& instance, struct Level* level, const mc_boost::shared_ptr<struct LivingEntity>& entity, int duration) {
+            Vec3 viewVec = entity->calculateViewVector();
+            viewVec *= 3.0;
+            Vec3 position = entity->position;
+            position.y += entity->eyeHeight;
+            Vec3 lookAtVec = viewVec + position;
+
+            for (mc_boost::shared_ptr<Entity>& _entity : level->entities) {
+                if (entity->entityId != _entity->entityId) {
+                    float distance = _entity->position.distance(lookAtVec);
+                    if (17.0f >= distance) {
+                        _entity->motion = lookAtVec - _entity->position;
+                    }
+                }
+            }
             return _this;
         }
+
+        static bool hurtEnemy(Item* _this, const mc_boost::shared_ptr<struct ItemInstance>& item, const mc_boost::shared_ptr<struct LivingEntity>& attacked, const mc_boost::shared_ptr<struct LivingEntity>& attacker) {
+            TestItem* __this = (TestItem*) _this;
+
+            __this->target_entity = attacked.get();
+            if (attacker->type() == ServerPlayer::GetType()) {
+                wchar_t temp[0x40];
+                mc_swprintf(temp, 0x40, L"Selected Entity with Id: %d", attacked->entityId);
+                ((ServerPlayer*) attacker.get())->listener->send(new mc::ClientboundChatPacket(temp));
+            }
+            return false;
+        }
+
+        static bool mineBlock(Item* _this, const mc_boost::shared_ptr<struct ItemInstance>& item, struct Level* lvl, const struct BlockState* state, const BlockPos& pos, mc_boost::shared_ptr<struct LivingEntity>& entity) {
+            mc_printf(L"Broke Block At (%d %d %d)", pos.x, pos.y, pos.z);
+            return false;   
+        }
+
+        LivingEntity* target_entity;
     };
 }
 
 DECL_FUNCTION(void, MinecraftWorld_RunStaticCtors__Fv, void) {
     real_MinecraftWorld_RunStaticCtors__Fv();
+    
+    // Something like minecraft:bow would be modded:custom_item 
     mc::ResourceLocation loc(L"modded", L"custom_item");
     mc::TestItem* testItem = new mc::TestItem();
+    
+    // Set Item Id to 1, so we can get it from the Creative Inventory
     mc::Item::registerItem(1, loc, testItem);
 }
 

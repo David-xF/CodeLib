@@ -87,6 +87,10 @@ namespace mc {
 			code::Func<void, 0x02721E08, Player*>()(this);
 		}
 
+		static uint64_t GetType() {
+			return code::Func<uint64_t, 0x027CD2F4>()();
+		}
+
 		// void setItemSlot(EquipmentSlot const * slot, ItemInstance* item) {
 		// 	code::Func<void, 0x02725F70, Player*, EquipmentSlot const *, ItemInstance*>()(this, slot, item);
 		// }

@@ -69,6 +69,10 @@ namespace mc {
             code::Func<void, 0x032c6fd8, ServerPlayer*, struct MobEffectInstance*, const mc_boost::shared_ptr<Entity>&>()(this, effect, entity);
         }
 
+        static uint64_t GetType() {
+            return code::Func<uint64_t, 0x0332fc30>()();
+        }
+
         struct ServerPlayerGameMode* gamemode;
         struct ServerGamePacketListenerImpl* listener;
         uint32_t field_0x874;

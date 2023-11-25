@@ -33,7 +33,7 @@ namespace mc {
 			// template from code::Func
 			// Can't be used, typeAddr is not Constant
     	    // ((ret(*)(Args...))(addr))(args...)
-			return ((uint64_t(*)(Entity*))(typeAddr))(this);
+			return ((uint64_t(*)())(typeAddr))();
     	}
 
 		void getStringUUID(const mstd::wstring& str) {
@@ -144,7 +144,7 @@ namespace mc {
 		uint32_t blockAABB;
 		uint32_t field_0x1E0;
 		struct Random* random; // Random
-		uint32_t field_0x1E8;
+		int tickCount;
 		uint32_t field_0x1EC;
 		uint32_t field_0x1F0;
 		uint32_t field_0x1F4;

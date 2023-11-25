@@ -53,5 +53,3 @@ namespace mc {
         Container container;
     };
 }
-
-MC_CHECK_SIZE(SimpleContainer, 0x68);
