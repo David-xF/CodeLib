@@ -69,6 +69,7 @@
 #include "network/listener/ServerGamePacketListenerImpl.h"
 
 #include "network/packet/clientbound/ClientbooundSetEntityMotionPacket.h"
+#include "network/packet/clientbound/ClientboundBlockUpdatePacket.h"
 #include "network/packet/clientbound/ClientboundChatPacket.h"
 #include "network/packet/clientbound/ClientboundSoundPacket.h"
 
