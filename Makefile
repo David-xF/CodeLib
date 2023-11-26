@@ -32,13 +32,13 @@ TARGET		   := CodeLib
 BUILD		   := build
 BUILD_DBG	   := $(TARGET)_dbg
 SOURCES		   := .
-DATA		   :=	
+DATA		   :=
 INCLUDES	   :=  include
 
 MODULE_MATCHES := 0x867317DE,0x6237F45C,0x90112329
 
 ASM_PATH       := GraphicPack/patch_codelib.asm
-# ASM_PATH     := C:/Users/David/Documents/BIN/graphicPacks/!Minecraft Cheats/Assembly/Aurora Client/patch_auc.asm
+# ASM_PATH       := C:/Users/David/Documents/BIN/graphicPacks/!Minecraft Cheats/Assembly/Aurora Client/patch_auc.asm
 
 
 #---------------------------------------------------------------------------------

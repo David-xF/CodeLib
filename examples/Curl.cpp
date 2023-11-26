@@ -38,7 +38,7 @@ int WriteCallback(char* contents, int size, int nmemb, xf::String<char>* userp) 
 }
 
 bool hasSentMessage = false;
-DECL_HOOK(onFrameInGame, void) {
+DECL_FUNCTION(mc::File*, filector, mc::File* file, const mstd::wstring& str) {
     if (!hasSentMessage) {
         void* curl = curl_easy_init();
         if (curl) {
@@ -54,12 +54,14 @@ DECL_HOOK(onFrameInGame, void) {
             hasSentMessage = true;
         }
     }
+
+    return real_filector(file, str);
 }
 
 int c_main(void*) {
     init();
 
-    HOOK(0x02D9CAD0, onFrameInGame, 0);
+    REPLACE(0x023237c0, filector);
 
     return 0;
 }

@@ -36,7 +36,7 @@ namespace xf {
             mc::CompoundTag* newTag = new mc::CompoundTag();
     
             newTag->putShort(L"id", ench);
-            newTag->putShort(L"lvL", lvl);
+            newTag->putShort(L"lvl", lvl);
     
             list->add(newTag);
         }

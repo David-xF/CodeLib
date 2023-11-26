@@ -28,6 +28,14 @@ void init() {
     memoryInitialize();
 }
 
+mc::Vec3 getLookAt(float yaw, float pitch) {
+    return mc::Vec3(
+        fabs(sinf(degToRad(pitch - 90.0f))) * sinf(degToRad(yaw   - 180.0f)),
+                                              sinf(degToRad(pitch - 180.0f)),
+        fabs(sinf(degToRad(pitch - 90.0f))) * cosf(degToRad(yaw))
+    );
+}
+
 namespace mc {
     VTable_Item* TestItem_default_vtbl = nullptr;
     class TestItem : public BowItem {
@@ -46,32 +54,16 @@ namespace mc {
         }
 
         static Item* releaseUsing(Item* _this, const mc_boost::shared_ptr<struct ItemInstance>& instance, struct Level* level, const mc_boost::shared_ptr<struct LivingEntity>& entity, int duration) {
-            Vec3 viewVec = entity->calculateViewVector();
-            viewVec *= 3.0;
-            Vec3 position = entity->position;
-            position.y += entity->eyeHeight;
-            Vec3 lookAtVec = viewVec + position;
-
-            for (mc_boost::shared_ptr<Entity>& _entity : level->entities) {
-                if (entity->entityId != _entity->entityId) {
-                    float distance = _entity->position.distance(lookAtVec);
-                    if (17.0f >= distance) {
-                        _entity->motion = lookAtVec - _entity->position;
-                    }
-                }
-            }
+            Vec3 lookAt = getLookAt(entity->yaw, entity->pitch);
+            lookAt *= 3.0f;
+            entity->push(lookAt.x, lookAt.y, lookAt.z);
             return _this;
         }
 
         static bool hurtEnemy(Item* _this, const mc_boost::shared_ptr<struct ItemInstance>& item, const mc_boost::shared_ptr<struct LivingEntity>& attacked, const mc_boost::shared_ptr<struct LivingEntity>& attacker) {
-            TestItem* __this = (TestItem*) _this;
-
-            __this->target_entity = attacked.get();
-            if (attacker->type() == ServerPlayer::GetType()) {
-                wchar_t temp[0x40];
-                mc_swprintf(temp, 0x40, L"Selected Entity with Id: %d", attacked->entityId);
-                ((ServerPlayer*) attacker.get())->listener->send(new mc::ClientboundChatPacket(temp));
-            }
+            Vec3 lookAt = getLookAt(attacker->yaw, attacker->pitch);
+            lookAt *= 3.0f;
+            attacker->push(lookAt.x, lookAt.y, lookAt.z);
             return false;
         }
 
@@ -79,8 +71,6 @@ namespace mc {
             mc_printf(L"Broke Block At (%d %d %d)", pos.x, pos.y, pos.z);
             return false;   
         }
-
-        LivingEntity* target_entity;
     };
 }
 

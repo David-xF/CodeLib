@@ -37,6 +37,11 @@ static void mc_swprintf(const wchar_t* outputPointer, uint32_t size, const wchar
 	code::Func<void, 0x382C8C0, const wchar_t*, uint32_t, const wchar_t*, Args...>()(outputPointer, size, __format, args...);
 }
 
+template<typename... Args>
+static void mc_snprintf(const char* outputPointer, uint32_t size, const char* __format, Args... args) {
+	code::Func<void, 0x0382DF78, const char*, uint32_t, const char*, Args...>()(outputPointer, size, __format, args...);
+}
+
 static float degToRad(float deg) {
     return (deg * M_PI / 180.0f);
 }
