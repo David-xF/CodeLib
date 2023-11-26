@@ -6,7 +6,11 @@ namespace mc {
     class ConsoleUIController {
     public:
         static ConsoleUIController* getInstance() {
-            return (ConsoleUIController*) 0x104F73E0;
+            #ifdef CEMU
+                return (ConsoleUIController*) 0x104F73E0;
+            #else
+                return (ConsoleUIController*) 0x109F95E0;
+            #endif
         }
 
         void PlayUISFX(struct SoundEvent* sound) {

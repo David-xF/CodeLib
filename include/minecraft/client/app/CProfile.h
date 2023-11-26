@@ -8,7 +8,11 @@ namespace mc {
     class CProfile {
     public:
         static CProfile* GetProfile() {
-            return code::Mem(0x10AD1C58 - 0x502200).as<CProfile*>();
+            #ifdef CEMU
+                return code::Mem(0x105CFA58).as<CProfile*>();
+            #else
+                return code::Mem(0x10AD1C58).as<CProfile*>();
+            #endif
         }
 
         void CreatePresenceString(uint32_t id, const mstd::wstring& wcstr) {

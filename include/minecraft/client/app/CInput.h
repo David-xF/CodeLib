@@ -13,7 +13,11 @@ namespace mc {
         };
 
         static inline CInput* GetInput() {
-            return code::Mem(0x10A90E6C - 0x502200).as<CInput*>();
+            #ifdef CEMU
+                return code::Mem(0x1058EC6C).as<CInput*>();
+            #else
+                return code::Mem(0x10A90E6C).as<CInput*>();
+            #endif
         }
 
         void GetText(const wchar_t* buffer, int32_t length) {

@@ -28,16 +28,18 @@ export OBJCOPY	:=	$(PREFIX)objcopy
 # SOURCES is a list of directories containing source code
 # INCLUDES is a list of directories containing extra header files
 #---------------------------------------------------------------------------------
-TARGET		:=	CodeLib
-BUILD		:=	build
-BUILD_DBG	:=	$(TARGET)_dbg
-SOURCES		:=	.
-DATA		:=	
+TARGET		   := CodeLib
+BUILD		   := build
+BUILD_DBG	   := $(TARGET)_dbg
+SOURCES		   := .
+DATA		   :=	
+INCLUDES	   :=  include
 
-ASM_PATH    :=  GraphicPack/patch_codelib.asm
-# ASM_PATH    :=  C:/Users/David/Documents/BIN/graphicPacks/!Minecraft Cheats/Assembly/Aurora Client/patch_auc.asm
+MODULE_MATCHES := 0x867317DE,0x6237F45C,0x90112329
 
-INCLUDES	:=  include
+ASM_PATH       := GraphicPack/patch_codelib.asm
+# ASM_PATH     := C:/Users/David/Documents/BIN/graphicPacks/!Minecraft Cheats/Assembly/Aurora Client/patch_auc.asm
+
 
 #---------------------------------------------------------------------------------
 # options for code generation
@@ -135,7 +137,7 @@ all:
 	@echo "Creating text_section.bin";
 	@$(OBJCOPY) --only-section=.text $(TARGET).elf -O binary $(BUILD)/text_section.bin
 	@echo "Creating .asm Content and Writing it to: $(ASM_PATH)"
-	@python -c 'with open("$(BUILD)/text_section.bin", "rb") as f: print("[Wrapper]\nmoduleMatches = 0x867317DE,0x6237F45C,0x90112329\n\n0x02F37154 = b _onStart\n\n0x104D4DD8 = .uint _Code\n0x104D4DDC = .uint 0x0\n\n.origin = codecave\n\n# .text\n_Code:"); print(".uint", end=" 0x"); [print("%02x" % val, end="" if i % 4 != 0 else "\n.uint 0x") for i, val in enumerate(f.read(), 1)]; print("00000000\n\n_onStart:\nbctrl\nlis r12, _Code@ha\naddi r12, r12, _Code@l\nmtctr r12\nbctrl\nb 0x02F37158")' > "$(ASM_PATH)"
+	@python -c 'with open("$(BUILD)/text_section.bin", "rb") as f: print("[Wrapper]\nmoduleMatches = ${MODULE_MATCHES}\n\n0x02F37154 = b _onStart\n\n0x104D4DD8 = .uint _Code\n0x104D4DDC = .uint 0x0\n\n.origin = codecave\n\n# .text\n_Code:"); print(".uint", end=" 0x"); [print("%02x" % val, end="" if i % 4 != 0 else "\n.uint 0x") for i, val in enumerate(f.read(), 1)]; print("00000000\n\n_onStart:\nbctrl\nlis r12, _Code@ha\naddi r12, r12, _Code@l\nmtctr r12\nbctrl\nb 0x02F37158")' > "$(ASM_PATH)"
 	@python -c 'with open("$(ASM_PATH)") as f: print("Total Lines Written: " + str(sum(1 for _ in f)));'
 #---------------------------------------------------------------------------------
 else

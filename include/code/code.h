@@ -16,3 +16,6 @@
 
 #define DEFINE_STATIC_VAR(type, name, addr) \
 	static inline type default_##name = (type) addr
+
+// WHEN CEMU IS DEFINED THE MC_LIB USES CEMU POINTERS	
+#define CEMU

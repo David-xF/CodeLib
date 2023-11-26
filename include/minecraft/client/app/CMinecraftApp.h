@@ -22,7 +22,11 @@ namespace mc {
         }
 
         static CMinecraftApp* getInstance() {
-            return code::Mem(0x10528DC0).as<CMinecraftApp*>();
+            #ifdef CEMU
+                return code::Mem(0x10528DC0).as<CMinecraftApp*>();
+            #else
+                return code::Mem(0x10A2AFC0).as<CMinecraftApp*>();
+            #endif
         }
     };
 }

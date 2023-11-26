@@ -19,9 +19,15 @@ namespace mc {
 
         // fixCoordinates = Fix Coordinates for 3D Rendering
         void vertex(float x, float y, float z = 0.0f, bool fixCoordinates = false) {
-            double fx = fixCoordinates ? (x - code::Mem(0x104CAA18).as<double>()) : (x);
-            double fy = fixCoordinates ? (y - code::Mem(0x104CAA20).as<double>()) : (y);
-            double fz = fixCoordinates ? (z - code::Mem(0x104CAA28).as<double>()) : (z);
+            #ifdef CEMU
+                double fx = fixCoordinates ? (x - code::Mem(0x104CAA18).as<double>()) : (x);
+                double fy = fixCoordinates ? (y - code::Mem(0x104CAA20).as<double>()) : (y);
+                double fz = fixCoordinates ? (z - code::Mem(0x104CAA28).as<double>()) : (z);
+            #else
+                double fx = fixCoordinates ? (x - code::Mem(0x109CCC18).as<double>()) : (x);
+                double fy = fixCoordinates ? (y - code::Mem(0x109CCC20).as<double>()) : (y);
+                double fz = fixCoordinates ? (z - code::Mem(0x109CCC28).as<double>()) : (z);
+            #endif
             code::Func<void, 0x02FD2A34, BufferBuilder*, float, float, float>()(this, fx, fy, fz);
         }
 

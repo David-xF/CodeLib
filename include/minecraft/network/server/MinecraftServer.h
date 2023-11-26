@@ -6,7 +6,11 @@ namespace mc {
     class MinecraftServer {
     public:
         static MinecraftServer* getInstance() {
-            return code::Mem(0x104CB6FC).as<MinecraftServer*>();
+            #ifdef CEMU
+                return code::Mem(0x104CB6FC).as<MinecraftServer*>();
+            #else
+                return code::Mem(0x109CD8FC).as<MinecraftServer*>();
+            #endif
         }
 
         struct ServerLevel* getLevel(int i) {

@@ -144,7 +144,7 @@ namespace mc {
 		uint32_t blockAABB;
 		uint32_t field_0x1E0;
 		struct Random* random; // Random
-		int tickCount;
+		int totalTickCount;
 		uint32_t field_0x1EC;
 		uint32_t field_0x1F0;
 		uint32_t field_0x1F4;
