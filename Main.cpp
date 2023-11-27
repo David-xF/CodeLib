@@ -17,6 +17,7 @@ void init() {
     InitTCPGecko();
     InitWups();
 
+    // Remove Whatever you don't need (Will Reduce File Size)
     InitSocketFunctionPointers();
     InitKernelFunctionPointers();
     InitVPadFunctionPointers();
