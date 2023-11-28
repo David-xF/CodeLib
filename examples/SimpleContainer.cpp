@@ -1,32 +1,6 @@
 #include <code/code.h>
 
-#include <code/tcpgecko.h>
-#include <code/wups.h>
-
-#include <exports/curl_functions.h>
-#include <exports/socket_functions.h>
-#include <exports/vpad_functions.h>
-#include <exports/gx2_functions.h>
-#include <exports/kernel.h>
-#include <exports/os_functions.h>
-#include <exports/memory.h>
-
 #include <minecraft/mc.h>
-
-void init() {
-    InitTCPGecko();
-    InitWups();
-
-    InitSocketFunctionPointers();
-    InitKernelFunctionPointers();
-    InitVPadFunctionPointers();
-    InitMemoryFunctionPointers();
-    InitOSFunctionPointers();
-    InitGX2FunctionPointers();
-    InitLibCurlFunctionPointers();
-
-    memoryInitialize();
-}
 
 DECL_FUNCTION(void, ServerPlayer_Swing, mc::ServerPlayer* player, mc::InteractionHand::EInteractionHand eHand) {
     real_ServerPlayer_Swing(player, eHand);
@@ -44,10 +18,28 @@ DECL_FUNCTION(void, ServerPlayer_Swing, mc::ServerPlayer* player, mc::Interactio
     player->openContainer(&shared->container);
 }
 
-int c_main(void*) {
-    init();
+DECL_FUNCTION(void, ServerGamePacketListenerImpl_handleContainerClick, mc::ServerGamePacketListenerImpl* listener, const mc_boost::shared_ptr<mc::ServerboundContainerClickPacket>& packet) {
+    mc::ServerPlayer* player = listener->player.get();
+    int maxSlots = player->currentContainer->getItems().size();
+    if (packet->slotNum >= maxSlots || 0 > packet->slotNum) return real_ServerGamePacketListenerImpl_handleContainerClick(listener, packet);
 
-    REPLACE(0x032d8b5c, ServerPlayer_Swing);
+    mc::ItemInstance* clickedItem = player->currentContainer->getItems()[packet->slotNum].get();
+
+    wchar_t temp[0x60];
+    mc_swprintf(temp, 0x60, L"You clicked on Item %d with Item Slot %d [Has Tag %s]", clickedItem->item->getId(), packet->slotNum, clickedItem->hasTag() ? "True" : "False");
+    listener->send(new mc::ClientboundChatPacket(temp));
+    listener->send(new mc::ClientboundSoundPacket(mc::SoundEvent::note_hat));
+
+    // If you want to cancel this Packet don't call real_ServerGamePacketListenerImpl_handleContainerClick
+    // And Refresh the container with player->refreshContainer(player->currentContainer);
+    real_ServerGamePacketListenerImpl_handleContainerClick(listener, packet);
+}
+
+int c_main(void*) {
+    code::init();
+
+    REPLACE(mc::ServerPlayer::_swing.addr(), ServerPlayer_Swing);
+    REPLACE(mc::ServerGamePacketListenerImpl::_handleContainerClick.addr(), ServerGamePacketListenerImpl_handleContainerClick);
 
     return 0;
 }

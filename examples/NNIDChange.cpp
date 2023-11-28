@@ -1,32 +1,6 @@
 #include <code/code.h>
 
-#include <code/tcpgecko.h>
-#include <code/wups.h>
-
-#include <exports/curl_functions.h>
-#include <exports/socket_functions.h>
-#include <exports/vpad_functions.h>
-#include <exports/gx2_functions.h>
-#include <exports/kernel.h>
-#include <exports/os_functions.h>
-#include <exports/memory.h>
-
 #include <minecraft/mc.h>
-
-void init() {
-    InitTCPGecko();
-    InitWups();
-
-    InitSocketFunctionPointers();
-    InitKernelFunctionPointers();
-    InitVPadFunctionPointers();
-    InitMemoryFunctionPointers();
-    InitOSFunctionPointers();
-    InitGX2FunctionPointers();
-    InitLibCurlFunctionPointers();
-
-    memoryInitialize();
-}
 
 int swkbd_callback(void* data, bool unk) {
     wchar_t* nnidAddr = (wchar_t*) data;
@@ -50,7 +24,7 @@ DECL_HOOK(onFrameInGame, void) {
 }
 
 int c_main(void*) {
-    init();
+    code::init();
 
     HOOK(0x02D9CAD0, onFrameInGame, 0);
 

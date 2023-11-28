@@ -1,32 +1,6 @@
 #include <code/code.h>
 
-#include <code/tcpgecko.h>
-#include <code/wups.h>
-
-#include <exports/curl_functions.h>
-#include <exports/socket_functions.h>
-#include <exports/vpad_functions.h>
-#include <exports/gx2_functions.h>
-#include <exports/kernel.h>
-#include <exports/os_functions.h>
-#include <exports/memory.h>
-
 #include <minecraft/mc.h>
-
-void init() {
-    InitTCPGecko();
-    InitWups();
-
-    InitSocketFunctionPointers();
-    InitKernelFunctionPointers();
-    InitVPadFunctionPointers();
-    InitMemoryFunctionPointers();
-    InitOSFunctionPointers();
-    InitGX2FunctionPointers();
-    InitLibCurlFunctionPointers();
-
-    memoryInitialize();
-}
 
 DECL_FUNCTION(bool, executeClickCommands__15SignBlockEntityFQ2_5boost25shared_ptr__tm__8_6Player, mc::SignBlockEntity* sign, mc_boost::shared_ptr<mc::Player> player) {
     mc::ServerPlayer* sPlayer = nullptr;;
@@ -44,7 +18,7 @@ DECL_FUNCTION(bool, executeClickCommands__15SignBlockEntityFQ2_5boost25shared_pt
 }
 
 int c_main(void*) {
-    init();
+    code::init();
 
     REPLACE(mc::SignBlockEntity::_executeClickCommands.addr(), executeClickCommands__15SignBlockEntityFQ2_5boost25shared_ptr__tm__8_6Player);
 

@@ -5,6 +5,29 @@
 #include "startup.h"
 #include "Random.h"
 
+#include "tcpgecko.h"
+#include "wups.h"
+
+#include <exports/exports.h>
+
+namespace code {
+	void init() {
+	    InitTCPGecko();
+	    InitWups();
+	
+	    // Remove Whatever you don't need (Will Reduce File Size)
+	    InitSocketFunctionPointers();
+	    InitKernelFunctionPointers();
+	    InitVPadFunctionPointers();
+	    InitMemoryFunctionPointers();
+	    InitOSFunctionPointers();
+	    InitGX2FunctionPointers();
+	    InitLibCurlFunctionPointers();
+	
+	    memoryInitialize();
+	}
+}
+
 #define WIDTH 640
 #define HEIGHT 360
 

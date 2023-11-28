@@ -1,35 +1,8 @@
 #include <code/code.h>
 
-#include <code/tcpgecko.h>
-#include <code/wups.h>
-
-#include <exports/curl_functions.h>
-#include <exports/socket_functions.h>
-#include <exports/vpad_functions.h>
-#include <exports/gx2_functions.h>
-#include <exports/kernel.h>
-#include <exports/os_functions.h>
-#include <exports/memory.h>
-
 #include <minecraft/mc.h>
-
 #include <xf/DrawHelper.h>
 #include <xf/String.h>
-
-void init() {
-    InitTCPGecko();
-    InitWups();
-
-    InitSocketFunctionPointers();
-    InitKernelFunctionPointers();
-    InitVPadFunctionPointers();
-    InitMemoryFunctionPointers();
-    InitOSFunctionPointers();
-    InitGX2FunctionPointers();
-    InitLibCurlFunctionPointers();
-
-    memoryInitialize();
-}
 
 uint32_t startAddr = 0x02000000;
 bool isShowing = false;
@@ -96,15 +69,10 @@ DECL_HOOK(onFrameInGame, void) {
     memoryViewer();
 }
 
-DECL_HOOK(onFrameInMenu, void) {
-    memoryViewer();
-}
-
 int c_main(void*) {
-    init();
+    code::init();
 
     HOOK(0x02D9CAD0, onFrameInGame, 0);
-    HOOK(0x02D9C8B0, onFrameInMenu, 0);
 
     return 0;
 }

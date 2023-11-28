@@ -1,34 +1,7 @@
 #include <code/code.h>
 
-#include <code/tcpgecko.h>
-#include <code/wups.h>
-
-#include <exports/curl_functions.h>
-#include <exports/socket_functions.h>
-#include <exports/vpad_functions.h>
-#include <exports/gx2_functions.h>
-#include <exports/kernel.h>
-#include <exports/os_functions.h>
-#include <exports/memory.h>
-
 #include <minecraft/mc.h>
-
 #include <xf/ItemInstanceHelper.h>
-
-void init() {
-    InitTCPGecko();
-    InitWups();
-
-    InitSocketFunctionPointers();
-    InitKernelFunctionPointers();
-    InitVPadFunctionPointers();
-    InitMemoryFunctionPointers();
-    InitOSFunctionPointers();
-    InitGX2FunctionPointers();
-    InitLibCurlFunctionPointers();
-
-    memoryInitialize();
-}
 
 DECL_FUNCTION(void, ServerPlayer_tick, mc::ServerPlayer* player) {
     real_ServerPlayer_tick(player);
@@ -59,7 +32,7 @@ DECL_FUNCTION(void, ServerPlayer_tick, mc::ServerPlayer* player) {
 }
 
 int c_main(void*) {
-    init();
+    code::init();
 
     REPLACE(mc::ServerPlayer::_tick.addr(), ServerPlayer_tick);
 
