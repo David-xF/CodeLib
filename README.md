@@ -11,7 +11,7 @@ After building your Graphics Pack is finished and can be found at [`./GraphicPac
 There you will find your Graphis Pack which you can then Enable or Disable. `Enable/Disable it Before Starting Minecraft!`
 
 # Information
-You can set your `ASM_PATH` in the `Makefile` to the path of your .asm File so you don't always have to replace it manually.
+You can set your `ASM_PATH` in the [`Makefile`](https://github.com/David-xF/CodeLib/blob/main/Makefile) to the path of your .asm File so you don't always have to replace it manually.
 
 If any Button Checks don't Work, you might have the Wrong Input Settings set, please check if your `Emulated Controller` is set to `Wii U Gamepad` as it is required.
 

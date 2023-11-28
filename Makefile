@@ -35,11 +35,11 @@ SOURCES		   := .
 DATA		   :=
 INCLUDES	   :=  include
 
+# You might want to add one if those don't work (Issue with newer Cemu Versions)
 MODULE_MATCHES := 0x867317DE,0x6237F45C,0x90112329
 
 ASM_PATH       := GraphicPack/patch_codelib.asm
 # ASM_PATH       := C:/Users/David/Documents/BIN/graphicPacks/!Minecraft Cheats/Assembly/Aurora Client/patch_auc.asm
-
 
 #---------------------------------------------------------------------------------
 # options for code generation

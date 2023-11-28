@@ -8,15 +8,17 @@ DECL_FUNCTION(void, ServerPlayerGameMode_breakBlock, mc::ServerPlayerGameMode* g
     
     mc::ServerLevel* level = mc::MinecraftServer::getInstance()->getLevel(0);
     int radius = 1;
-    for (int x = -radius; x < (radius + 1); x++) {
-        for (int y = -radius; y < (radius + 1); y++) {
-            for (int z = -radius; z < (radius + 1); z++) {
+    for (int x = -radius; x <= radius; x++) {
+        for (int y = -radius; y <= radius; y++) {
+            for (int z = -radius; z <= radius; z++) {
                 // Send an Update Packet back to let the Player know that the block is still there
                 mc_boost::shared_ptr<mc::Packet> packet(new mc::ClientboundBlockUpdatePacket(level, {pos.x + x, pos.y + y, pos.z + z}));
                 player->listener->send(packet);
             }
         }
     }
+
+    // No real_ServerPlayerGameMode_breakBlock Because we don't want to break the Block (It gets Canceled)
 }
 
 int c_main(void*) {

@@ -13,6 +13,12 @@ DECL_FUNCTION(bool, executeClickCommands__15SignBlockEntityFQ2_5boost25shared_pt
     if (!sPlayer) return true;
     
     // What to do when the Sign gets clicked
+    sPlayer->listener->send(new mc::ClientboundChatPacket(sign->line1));
+    sPlayer->listener->send(new mc::ClientboundChatPacket(sign->line2));
+    sPlayer->listener->send(new mc::ClientboundChatPacket(sign->line3));
+    sPlayer->listener->send(new mc::ClientboundChatPacket(sign->line4));
+
+    mc::BlockPos pos = sPlayer->tickCache.pos1;
 
     return true;
 }
