@@ -15,5 +15,7 @@ You can set your `ASM_PATH` in the [`Makefile`](https://github.com/David-xF/Code
 
 If any Button Checks don't Work, you might have the Wrong Input Settings set, please check if your `Emulated Controller` is set to `Wii U Gamepad` as it is required.
 
+If you want to Fix most Pointers which are used on Wii U for example: `0x109C61B0` do `-0x502200` and you will get `0x104C3FB0`. Which can be used with Cemu. The same is for Reverse, just do `+0x502200` and then it can be used with Wii U.
+
 # Contributors
-[`David xF`](https://github.com/David-xF), [`literallyuki`](https://github.com/literallyuki), [`Syoch`](https://github.com/Syoch), [`xenona (xenrelle)`](https://github.com/xenrelle), [`Miku666`](https://github.com/NessieHax), [`PhoenixARC`](https://github.com/PhoenixARC)
+[`David xF`](https://github.com/David-xF), [`literallyuki`](https://github.com/literallyuki), [`Syoch`](https://github.com/Syoch), [`xenona (xenrelle)`](https://github.com/xenrelle), [`Miku666`](https://github.com/NessieHax), [`PhoenixARC`](https://github.com/PhoenixARC), `Inupong`

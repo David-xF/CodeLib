@@ -10,18 +10,27 @@ mc::Vec3 getLookAt(float yaw, float pitch) {
     );
 }
 
+// Spawn PrimedTnt
 mc::PrimedTnt* spawnTnt(mc::ServerPlayer* player) {
+    // Create a new PrimedTnt Instance
     mc::PrimedTnt* tnt = new mc::PrimedTnt(player->lvl);
-    mstd::wstring pUID;
-    player->getStringUUID(pUID);
-    tnt->setCustomName(L"aabbccdd", pUID, true);
+    
+    // Its Important i think
+    mstd::wstring playerUUID;
+    player->getStringUUID(playerUUID);
+    // I don't know why aabbccdd, i think you can input anything
+    tnt->setCustomName(L"aabbccdd", playerUUID, true);
 
+    // Also Important
     uint32_t* idk = new uint32_t[4];
-    idk[0] = 1;
-    idk[1] = 1;
-    idk[2] = mc::PrimedTnt::default_something_important_with_spawning;
+    idk[0] = 1; // idk 1
+    idk[1] = 1; // idk 2
+    idk[2] = mc::PrimedTnt::default_something_important_with_spawning; // I don't know what this is and where to get this from. 
     idk[3] = (uint32_t) tnt;
-    tnt->_this_ptr = mc_boost::shared_ptr<mc::Entity>(tnt, (uint32_t) idk);
+    tnt->this_shared = mc_boost::shared_ptr<mc::Entity>(tnt, (uint32_t) idk);
+
+    // This could crash. I didn't test it Properly and the First time it crashed me so idk
+    tnt->setFuse(20 * 10); // 10 Seconds
 
     return tnt;
 }  
@@ -29,15 +38,23 @@ mc::PrimedTnt* spawnTnt(mc::ServerPlayer* player) {
 DECL_FUNCTION(void, ServerPlayer_swing, mc::ServerPlayer* player, mc::InteractionHand::EInteractionHand hand) {
     // No Comments on this one Because i don't know either tbh
     mc::PrimedTnt* tnt = spawnTnt(player);
+
+    // Move the PrimedTnt to the Position of the Players Eyes
     tnt->moveTo(player->position.x, player->position.y, player->position.z, 0.0f, 0.0f);
+    
+    // Push the PrimedTnt into the Direction the Player is Looking
     mc::Vec3 push = getLookAt(player->yaw, player->pitch);
     push *= 3.0f;
     push.y /= 2.0f;
     tnt->push(push.x, push.y, push.z);
 
-    player->listener->server->getLevel(0)->addEntity(tnt->_this_ptr);
-    player->startRiding(tnt->_this_ptr);
+    // Add the PrimedTnt to the ServerLevel 
+    player->listener->server->getLevel(0)->addEntity(tnt->this_shared);
 
+    // Make the Player ride the PrimedTnt
+    player->startRiding(tnt->this_shared);
+
+    // Spawn 20 PrimedTnts around the Player (No Explaination here)
     const int count = 20;
     const float yaw = 360.0f / mc::toFloat(count);
     for (int i = 0; i < count; i++) {
@@ -50,9 +67,10 @@ DECL_FUNCTION(void, ServerPlayer_swing, mc::ServerPlayer* player, mc::Interactio
         _push *= 2.0f;
         _tnt->push(_push.x, _push.y, _push.z);
 
-        player->listener->server->getLevel(0)->addEntity(_tnt->_this_ptr);
+        player->listener->server->getLevel(0)->addEntity(_tnt->this_shared);
     }
 
+    // Make the Player swing the Hand;
     real_ServerPlayer_swing(player, hand);
 }
 

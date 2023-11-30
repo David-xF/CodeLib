@@ -16,11 +16,13 @@ namespace mc {
         }
 
         DEFINE_STATIC_VAR(struct VTable_Entity*, vtbl, 0x10225758);
+
+        // I don't know if it is only for this Entity or for others
         DEFINE_STATIC_VAR(uint32_t, something_important_with_spawning, 0x100CA7B4);
 
         uint32_t field_0x350;
         uint32_t field_0x354;
-        uint32_t field_0x358;
+        int fuseTimer; // I think
         uint32_t field_0x35C;
     };
 }

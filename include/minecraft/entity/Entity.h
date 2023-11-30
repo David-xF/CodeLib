@@ -64,7 +64,7 @@ namespace mc {
 			return code::Func<bool, 0x02340568, Entity*>()(this);
 		}
         
-        mc_boost::shared_ptr<Entity> _this_ptr;
+        mc_boost::shared_ptr<Entity> this_shared;
 		void* anotherVtbl; // Will look at later
 		uint32_t entityId;
 		uint32_t field_0x10;
