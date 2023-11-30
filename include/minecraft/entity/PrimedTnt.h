@@ -15,10 +15,7 @@ namespace mc {
             code::Func<void, 0x027e826c, PrimedTnt*, int>()(this, fuse);
         }
 
-        DEFINE_STATIC_VAR(struct VTable_Entity*, vtbl, 0x10225758);
-
-        // I don't know if it is only for this Entity or for others
-        DEFINE_STATIC_VAR(uint32_t, something_important_with_spawning, 0x100CA7B4);
+        DEFINE_STATIC_DEF_VAR(struct VTable_Entity*, vtbl, 0x10225758);
 
         uint32_t field_0x350;
         uint32_t field_0x354;

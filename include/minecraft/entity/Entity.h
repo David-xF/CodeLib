@@ -63,6 +63,8 @@ namespace mc {
 		bool isSneaking() {
 			return code::Func<bool, 0x02340568, Entity*>()(this);
 		}
+
+		DEFINE_STATIC_VAR(struct VTable*, spawn_entity_vtbl, 0x100CA7B4);
         
         mc_boost::shared_ptr<Entity> this_shared;
 		void* anotherVtbl; // Will look at later

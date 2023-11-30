@@ -16,11 +16,11 @@ namespace mc {
         }
 
         #ifdef CEMU
-            DEFINE_STATIC_VAR(struct VTable_Item*, vtbl, 0x10061554);
+            DEFINE_STATIC_DEF_VAR(struct VTable_Item*, vtbl, 0x10061554);
         #else
-            DEFINE_STATIC_VAR(struct VTable_Item*, vtbl, 0x10563754);
+            DEFINE_STATIC_DEF_VAR(struct VTable_Item*, vtbl, 0x10563754);
         #endif
-        DEFINE_STATIC_VAR(int, itemId, 261);
+        DEFINE_STATIC_DEF_VAR(int, itemId, 261);
 
         uint32_t field_0x78;
         uint32_t field_0x7C;

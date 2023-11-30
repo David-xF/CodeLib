@@ -37,8 +37,11 @@ namespace code {
 	int flag_##function_name;                                     \
 	return_type(*function_name)(class_type* _this, ##__VA_ARGS__)
 
+#define DEFINE_STATIC_DEF_VAR(type, name, addr) \
+	static inline type default_##name = (type) addr;
+
 #define DEFINE_STATIC_VAR(type, name, addr) \
-	static inline type default_##name = (type) addr
+	static inline type name = (type) addr;
 
 // WHEN CEMU IS DEFINED THE MC_LIB USES CEMU POINTERS	
 #define CEMU

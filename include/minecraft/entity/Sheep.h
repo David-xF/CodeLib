@@ -15,7 +15,7 @@ namespace mc {
             code::Func<void, 0x028802C0, Sheep*>()(this);
         }
 
-        DEFINE_STATIC_VAR(struct VTable_Entity*, vtbl, 0x10242E30);
+        DEFINE_STATIC_DEF_VAR(struct VTable_Entity*, vtbl, 0x10242E30);
 
         uint32_t field_0x780;
         uint32_t field_0x784;
