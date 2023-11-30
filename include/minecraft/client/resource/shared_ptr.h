@@ -8,6 +8,11 @@ namespace mc_boost {
 			ptr = p;
 	    	cnt = 0;
 	  	}
+
+		shared_ptr(T* p, uint32_t c) {
+			ptr = p;
+	    	cnt = c;
+	  	}
 	
 		shared_ptr() {
 	    	ptr = 0;

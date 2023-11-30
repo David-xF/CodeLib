@@ -52,6 +52,7 @@
 #include "entity/Mob.h"
 #include "entity/Painting.h"
 #include "entity/PathfinderMob.h"
+#include "entity/PrimedTnt.h"
 #include "entity/Sheep.h"
 #include "entity/SpectralArrow.h"
 #include "entity/TippableArrow.h"
