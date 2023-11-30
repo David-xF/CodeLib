@@ -43,6 +43,10 @@ namespace mc {
             return Vec3(x + other.x, y + other.y, z + other.z);
         }
 
+        Vec3 operator*(float mult) {
+            return Vec3(x * mult, y * mult, z * mult);
+        }
+
         Vec3 operator-(Vec3 other) {
             return Vec3(x - other.x, y - other.y, z - other.z);
         }

@@ -16,10 +16,10 @@ export PORTLIBS		:=	$(DEVKITPRO)/portlibs/ppc
 
 PREFIX	:=	powerpc-eabi-
 
-export AS	:=	$(PREFIX)as
-export CC	:=	$(PREFIX)gcc
-export CXX	:=	$(PREFIX)g++
-export AR	:=	$(PREFIX)ar
+export AS	    :=	$(PREFIX)as
+export CC	    :=	$(PREFIX)gcc
+export CXX	    :=	$(PREFIX)g++
+export AR	    :=	$(PREFIX)ar
 export OBJCOPY	:=	$(PREFIX)objcopy
 
 #---------------------------------------------------------------------------------

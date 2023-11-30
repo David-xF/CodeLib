@@ -73,8 +73,8 @@ namespace mc {
             return code::Func<uint64_t, 0x0332fc30>()();
         }
 
-        void startRiding(mc_boost::shared_ptr<Entity>& ent) {
-            code::Func<void, 0x032ca21c, ServerPlayer*, mc_boost::shared_ptr<Entity>&>()(this, ent);
+        void startRiding(const mc_boost::shared_ptr<Entity>& ent) {
+            code::Func<void, 0x032ca21c, ServerPlayer*, const mc_boost::shared_ptr<Entity>&>()(this, ent);
         }
 
         struct ServerPlayerGameMode* gamemode;

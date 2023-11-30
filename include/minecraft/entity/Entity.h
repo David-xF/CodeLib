@@ -15,6 +15,20 @@ namespace mc {
 
         }
 
+		void setupForSpawn(const mstd::wstring& name, Entity* namer) {
+			mstd::wstring playerUUID;
+    		namer->getStringUUID(playerUUID);
+    		this->setCustomName(name, playerUUID, true);
+
+			// I don't know (Don't ask me)
+    		uint32_t* data = new uint32_t[4];
+    		data[0] = 1;
+    		data[1] = 1;
+    		data[2] = (uint32_t) mc::Entity::spawn_entity_vtbl;
+    		data[3] = (uint32_t) this;
+    		this->this_shared = mc_boost::shared_ptr<mc::Entity>(this, (uint32_t) data);
+		}
+
 		void setPos(double _x, double _y, double _z) {
 			code::Func<void, 0x023298e0, Entity*, double, double, double>()(this, _x, _y, _z);
 		}
