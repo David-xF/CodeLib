@@ -5,6 +5,10 @@
 namespace mc {
     class Mob : public LivingEntity {
     public:
+        void setNoAi(bool state) {
+            code::Func<void, 0x02651ec4, Mob*, bool>()(this, state);
+        }
+
         uint32_t field_0x5F0;
         uint32_t field_0x5F4;
         uint32_t field_0x5F8;

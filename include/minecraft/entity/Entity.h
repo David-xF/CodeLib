@@ -33,8 +33,16 @@ namespace mc {
 			code::Func<void, 0x023298e0, Entity*, double, double, double>()(this, _x, _y, _z);
 		}
 
+		void setPos(const Vec3& pos) {
+			code::Func<void, 0x023298e0, Entity*, double, double, double>()(this, pos.x, pos.y, pos.z);
+		}
+
 		void moveTo(double _x, double _y, double _z, float _yaw, float _pitch) {
 			code::Func<void, 0x0233474c, Entity*, double, double, double, float, float>()(this, _x, _y, _z, _yaw, _pitch);
+		}
+
+		void moveTo(const Vec3& pos, float _yaw, float _pitch) {
+			code::Func<void, 0x0233474c, Entity*, double, double, double, float, float>()(this, pos.x, pos.y, pos.z, _yaw, _pitch);
 		}
 
 		float getEyeHeight() {
@@ -62,6 +70,10 @@ namespace mc {
 			code::Func<void, 0x02334EF4, Entity*, double, double, double>()(this, _x, _y, _z);
 		}
 
+		void push(const Vec3& pos) {
+			code::Func<void, 0x02334EF4, Entity*, double, double, double>()(this, pos.x, pos.y, pos.z);
+		}
+
 		void startRiding(const mc_boost::shared_ptr<Entity>& entity, bool unk) {
 			code::Func<void, 0x0233BEA0, Entity*, const mc_boost::shared_ptr<Entity>&, bool>()(this, entity, unk);
 		}
@@ -70,12 +82,36 @@ namespace mc {
 			return code::Func<const Vec3&, 0x02334FB8, Entity*>()(this);
 		}
 
+		void setSilent(bool state) {
+			code::Func<void, 0x02331394, Entity*, bool>()(this, state);
+		}
+
+		void setNoGravity(bool state) {
+			code::Func<void, 0x023314a4, Entity*, bool>()(this, state);
+		}
+
 		void remove() {
 			code::Func<void, 0x0232b538, Entity*>()(this);
 		}
 
 		bool isSneaking() {
 			return code::Func<bool, 0x02340568, Entity*>()(this);
+		}
+
+		bool getSharedFlag(int index) {
+			return code::Func<bool, 0x023369b8, Entity*, int>()(this, index);
+		}
+
+		void setSharedFlag(int index, bool state) {
+			code::Func<void, 0x0232bb18, Entity*, int, bool>()(this, index, state);
+		}
+
+		void setCustomNameVisible(bool state) {
+			code::Func<void, 0x02347228, Entity*, bool>()(this, state);
+		}
+
+		void setInvulnerable(bool state) {
+			code::Func<void, 0x023418dc, Entity*, bool>()(this, state);
 		}
 
 		DEFINE_STATIC_VAR(struct VTable*, spawn_entity_vtbl, 0x100CA7B4);
