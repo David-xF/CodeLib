@@ -15,7 +15,7 @@ mc::AreaEffectCloud* spawnHologram(mc::Vec3 pos, const wchar_t* name, mc::Server
     mc::AreaEffectCloud* cloud = new mc::AreaEffectCloud(player->lvl);
     cloud->setupForSpawn(name, player);
     cloud->setCustomNameVisible(true);
-    cloud->moveTo(pos.x, pos.y, pos.z, 0.0f, 0.0f);
+    cloud->moveTo(pos);
     cloud->setParticle(mc::ParticleType::byId(mc::ePARTICLE_TYPE::NONE));
     cloud->setDuration(0x7FFF0000);
     cloud->setRadiusOnUse(0.0f);
@@ -37,7 +37,7 @@ DECL_FUNCTION(void, ServerPlayer_swing, mc::ServerPlayer* player, mc::Interactio
     zombie->setInvulnerable(true);
     zombie->setNoGravity(true);
     zombie->setSilent(true);
-    zombie->moveTo(player->position, 0.0f, 0.0f);
+    zombie->moveTo(player->position);
     player->listener->server->getLevel(0)->addEntity(zombie);
 
     mc::Zombie* zombie2 = new mc::Zombie(player->lvl);
@@ -46,20 +46,20 @@ DECL_FUNCTION(void, ServerPlayer_swing, mc::ServerPlayer* player, mc::Interactio
     zombie2->setInvulnerable(true);
     zombie2->setNoGravity(true);
     zombie2->setSilent(true);
-    zombie2->moveTo(player->position + mc::Vec3(0.0f, 0.0f, 5.0f), 0.0f, 0.0f);
+    zombie2->moveTo(player->position + mc::Vec3(0.0f, 0.0f, 5.0f));
     player->listener->server->getLevel(0)->addEntity(zombie2);
 
     mc::PrimedTnt* tnt = new mc::PrimedTnt(player->lvl);
     tnt->setupForSpawn(L"", player);
     tnt->setFuse(20 * 12); // 12 Seconds
     tnt->push(0.0f, 1.45f, 0.0f);
-    tnt->moveTo(player->position, 0.0f, 0.0f);
+    tnt->moveTo(player->position);
     player->listener->server->getLevel(0)->addEntity(tnt);
 
     mc::Sheep* sheep = new mc::Sheep(player->lvl);
     sheep->setupForSpawn(L"", player);
     sheep->setInvulnerable(true);
-    sheep->moveTo(player->position, 0.0f, 0.0f);
+    sheep->moveTo(player->position);
     player->listener->server->getLevel(0)->addEntity(sheep);
     
     sheep->startRiding(tnt, false);
@@ -67,6 +67,7 @@ DECL_FUNCTION(void, ServerPlayer_swing, mc::ServerPlayer* player, mc::Interactio
     mc::Slime* slime = new mc::Slime(player->lvl);
     slime->setupForSpawn(L"", player);
     slime->setInvulnerable(true);
+    slime->moveTo(player->position);
     player->listener->server->getLevel(0)->addEntity(slime);
 
     slime->startRiding(sheep, false);

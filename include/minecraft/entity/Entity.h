@@ -37,11 +37,11 @@ namespace mc {
 			code::Func<void, 0x023298e0, Entity*, double, double, double>()(this, pos.x, pos.y, pos.z);
 		}
 
-		void moveTo(double _x, double _y, double _z, float _yaw, float _pitch) {
+		void moveTo(double _x, double _y, double _z, float _yaw = 1.0f, float _pitch = 1.0f) {
 			code::Func<void, 0x0233474c, Entity*, double, double, double, float, float>()(this, _x, _y, _z, _yaw, _pitch);
 		}
 
-		void moveTo(const Vec3& pos, float _yaw, float _pitch) {
+		void moveTo(const Vec3& pos, float _yaw = 1.0f, float _pitch = 1.0f) {
 			code::Func<void, 0x0233474c, Entity*, double, double, double, float, float>()(this, pos.x, pos.y, pos.z, _yaw, _pitch);
 		}
 
