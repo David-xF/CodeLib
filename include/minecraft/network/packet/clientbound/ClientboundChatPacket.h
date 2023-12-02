@@ -6,6 +6,7 @@
 #include "../../../client/resource/vector.h"
 
 #include "../Packet.h"
+#include "../../../util/Other.h"
 
 namespace mc {
     class ClientboundChatPacket : public Packet {
@@ -13,6 +14,14 @@ namespace mc {
         ClientboundChatPacket(const mstd::wstring& str) {
             uint32_t temp[20]; 
             code::Func<void, 0x021b7408, ClientboundChatPacket*, const mstd::wstring&, uint32_t[], int>()(this, str, temp, 0x46);
+        }
+
+        template<typename... Args>
+        ClientboundChatPacket(const mstd::wstring& str, Args... args) {
+            wchar_t _temp[0xA0];
+            mc_swprintf(_temp, 0xA0, str.c_str(), args...);
+            uint32_t temp[20];
+            code::Func<void, 0x021b7408, ClientboundChatPacket*, const mstd::wstring&, uint32_t[], int>()(this, _temp, temp, 0x46);
         }
 
         mstd::vector<mstd::wstring> str_v;
