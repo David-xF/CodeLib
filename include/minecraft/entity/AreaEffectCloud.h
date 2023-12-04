@@ -9,10 +9,6 @@ namespace mc {
             code::Func<void, 0x02085B3C, AreaEffectCloud*, struct Level*>()(this, _level);
         }
 
-        static uint64_t GetType() {
-            return code::Func<uint64_t, 0x020b3cdc>()();
-        }
-
         int getDuration() {
             return code::Func<int, 0x02086C14, AreaEffectCloud*>()(this);
         }
@@ -43,6 +39,10 @@ namespace mc {
 
         void setRadiusOnUse(float r) {
             code::Func<void, 0x02086e98, AreaEffectCloud*, float>()(this, r);
+        }
+
+        static uint64_t GetType() {
+            return code::Func<uint64_t, 0x020b3cdc>()();
         }
 
         uint32_t field_0x350;

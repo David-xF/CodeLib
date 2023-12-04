@@ -9,6 +9,14 @@ namespace mc {
             code::Func<void, 0x0208bad4, ArmorStand*, struct Level*>()(this, _level);
         }
 
+        void setShorArms(bool state) {
+            code::Func<void, 0x0202ece8, ArmorStand*, bool>()(this, state);
+        }
+
+        void setItemSlot(struct EquipmentSlot* slot, const mc_boost::shared_ptr<struct ItemInstance>& item) {
+            code::Func<void, 0x0208c018, ArmorStand*, struct EquipmentSlot*, const mc_boost::shared_ptr<struct ItemInstance>&>()(this, slot, item);
+        }
+
         static uint64_t GetType() {
             return code::Func<uint64_t, 0x020b3dbc>()();
         }

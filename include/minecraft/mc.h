@@ -113,6 +113,7 @@
 #include "util/Direction.h"
 #include "util/EntityTickCache.h"
 #include "util/ePARTICLE_TYPE.h"
+#include "util/EquipmentSlot.h"
 #include "util/FloatConverter.h"
 #include "util/FoodData.h"
 #include "util/GameType.h"
