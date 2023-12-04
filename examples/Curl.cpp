@@ -11,7 +11,7 @@ int WriteCallback(char* contents, int size, int nmemb, xf::String<char>* userp) 
 }
 
 bool hasSentMessage = false;
-DECL_FUNCTION(mc::File*, filector, mc::File* file, const mstd::wstring& str) {
+DECL_FUNCTION(void, LocalPlayer_swing, mc::LocalPlayer* player, int hand) {
     if (!hasSentMessage) {
         void* curl = curl_easy_init();
         if (curl) {
@@ -28,13 +28,13 @@ DECL_FUNCTION(mc::File*, filector, mc::File* file, const mstd::wstring& str) {
         }
     }
 
-    return real_filector(file, str);
+    real_LocalPlayer_swing(player, hand);
 }
 
 int c_main(void*) {
     code::init();
 
-    REPLACE(0x023237c0, filector);
+    REPLACE(mc::LocalPlayer::_swing.addr(), LocalPlayer_swing);
 
     return 0;
 }
