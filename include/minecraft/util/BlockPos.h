@@ -9,6 +9,10 @@ namespace mc {
 			code::Func<BlockPos*, 0x020c3ad4, BlockPos*, int, int, int>()(this, _x, _y, _z); 
 	  	}
 
+		BlockPos(struct Entity* entity) {
+			code::Func<void, 0x020c3d38, BlockPos*, struct Entity*>()(this, entity);
+		}
+
 		BlockPos() = default;
 
 		BlockPos operator+(mc::BlockPos pos) {

@@ -12,13 +12,7 @@ namespace mc {
             y = _y;
             z = _z;
         }
-
-        Vec3(float _x, float _y, float _z) {
-            x = _x;
-            y = _y;
-            z = _z;
-        }
-
+        
         Vec3() = default;
 
         double distance(Vec3 other) {
