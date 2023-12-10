@@ -12,6 +12,10 @@ namespace mc {
         ItemInstance(struct Item* item, int amount, int aux) {
             code::Func<void, 0x024862d0, ItemInstance*, struct Item*, int, int>()(this, item, amount, aux);
         }
+		
+        static void toShared(const mc_boost::shared_ptr<ItemInstance>& ret, ItemInstance* src) {
+            code::Func<void, 0x3065EE0, const mc_boost::shared_ptr<ItemInstance>&, ItemInstance*>()(ret, src);
+        }
 
         void setAuxValue(int val) {
             code::Func<void, 0x02488B2C, ItemInstance*, int>()(this, val);
