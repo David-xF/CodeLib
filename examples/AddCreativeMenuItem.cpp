@@ -13,31 +13,29 @@ mc_boost::shared_ptr<struct mc::ItemInstance> GetItemPtr(mc::Item* ItemPointer, 
 }
 	
 	
-DECL_FUNCTION(void, MenuBuilder_Block, uint32_t e1, uint32_t e2) {
-	
-	uint32_t Blockstate = mc::Block::byId(52)->defaultBlockState();
+DECL_FUNCTION(void, MenuBuilder_Block, mc::MenuBuilder* builder, uint32_t State) {
 	
 	// run normal function to add block
-	real_MenuBuilder_Block(e1, e2);
+	real_MenuBuilder_Block(builder, State);
 	
-	
-	if(e2 == Blockstate) // is added block is a monster spawner
+	if(State == mc::Block::byId(52)->defaultBlockState()) // if block is a monster spawner(ID 52)
 	{
-		real_MenuBuilder_Block(e1, mc::Block::byId(166)->defaultBlockState()); // add barrier
+		builder->ITEM_BLOCKSTATE(mc::Block::byId(166)->defaultBlockState()); // add barrier
+		builder->ADD(api.GetItemPtr(mc::Item::byId(2255), 1, 0)); // add 4j debug item
 	}
-	
-	
 	
 }
 
-DECL_FUNCTION(void, MenuBuilder_Item, uint32_t e1, const mc_boost::shared_ptr<struct mc::ItemInstance>& e2) {
+DECL_FUNCTION(void, MenuBuilder_Item, mc::MenuBuilder* builder, const mc_boost::shared_ptr<struct mc::ItemInstance>& instance) {
 	
 	// run normal function to add item
-	real_MenuBuilder_Item(e1, e2);
+	real_MenuBuilder_Item(builder, instance);
 	
-	if(e2.get()->item->getId() == 399) // if Item has ID of nether star
+	
+	if(instance.get()->item->getId() == 399)  // if Item is a nether star(ID 399)
 	{
-		real_MenuBuilder_Item(e1, GetItemPtr(mc::Item::byId(2255), 1, 0)); // add 4j debug item
+		builder->ITEM_BLOCKSTATE(mc::Block::byId(166)->defaultBlockState()); // add barrier
+		builder->ADD(api.GetItemPtr(mc::Item::byId(2255), 1, 0)); // add 4j debug item
 	}
 	
 	
