@@ -66,7 +66,7 @@
 #include "item/BlockItem.h"
 #include "item/BowItem.h"
 #include "item/Item.h"
-#include "item/ItemInstane.h"
+#include "item/ItemInstance.h"
 
 #include "nbt/CompundTag.h"
 #include "nbt/ListTag.h"
