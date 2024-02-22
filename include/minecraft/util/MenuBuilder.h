@@ -8,9 +8,10 @@ namespace mc {
 	
     class MenuBuilder {
 		public:
-        void ADD(const mc_boost::shared_ptr<struct mc::ItemInstance>& Instance)
+        void ADD(const mc_boost::shared_ptr<struct mc::ItemInstance>& InstanceSharedPtr, mc::ItemInstance Instance)
 		{
-			code::Func<void, 0x02F0F424, MenuBuilder*, const mc_boost::shared_ptr<struct mc::ItemInstance>&>()(this, Instance);
+			mc::ItemInstance::toShared(InstanceSharedPtr, &Instance);
+			code::Func<void, 0x02F0F424, MenuBuilder*, const mc_boost::shared_ptr<struct mc::ItemInstance>&>()(this, InstanceSharedPtr);
 		}
 		
         void ITEM_BLOCKSTATE(uint32_t BlockState)

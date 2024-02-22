@@ -1,18 +1,10 @@
 #include <code/code.h>
 #include <minecraft/mc.h>
 
-mc_boost::shared_ptr<struct mc::ItemInstance> GetItemPtr(mc::Item* ItemPointer, int qty, int aux)
-{
-	mc::ItemInstance inst = mc::ItemInstance(ItemPointer, qty, aux);
-	mc::ItemInstance* itm = &inst;
-	mc_boost::shared_ptr<mc::ItemInstance> instance;
-		
-	mc::ItemInstance::toShared(instance, itm);
-		
-	return instance;
-}
-	
-	
+
+
+mc_boost::shared_ptr<struct mc::ItemInstance> publicItemInstancePtr;
+
 DECL_FUNCTION(void, MenuBuilder_Block, mc::MenuBuilder* builder, uint32_t State) {
 	
 	// run normal function to add block
@@ -21,7 +13,7 @@ DECL_FUNCTION(void, MenuBuilder_Block, mc::MenuBuilder* builder, uint32_t State)
 	if(State == mc::Block::byId(52)->defaultBlockState()) // if block is a monster spawner(ID 52)
 	{
 		builder->ITEM_BLOCKSTATE(mc::Block::byId(166)->defaultBlockState()); // add barrier
-		builder->ADD(api.GetItemPtr(mc::Item::byId(2255), 1, 0)); // add 4j debug item
+		builder->ADD(publicItemInstancePtr, mc::ItemInstance(mc::Item::byId(2255), 1, 0)); // add 4j debug item
 	}
 	
 }
@@ -35,7 +27,7 @@ DECL_FUNCTION(void, MenuBuilder_Item, mc::MenuBuilder* builder, const mc_boost::
 	if(instance.get()->item->getId() == 399)  // if Item is a nether star(ID 399)
 	{
 		builder->ITEM_BLOCKSTATE(mc::Block::byId(166)->defaultBlockState()); // add barrier
-		builder->ADD(api.GetItemPtr(mc::Item::byId(2255), 1, 0)); // add 4j debug item
+		builder->ADD(publicItemInstancePtr, mc::ItemInstance(mc::Item::byId(2255), 1, 0)); // add 4j debug item
 	}
 	
 	

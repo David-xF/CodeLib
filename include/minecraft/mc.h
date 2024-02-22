@@ -18,6 +18,7 @@
 #include "client/file/FileOutputStream.h"
 
 #include "client/resource/texture/Textures.h"
+#include "client/resource/texture/TextureAtlas.h"
 
 #include "client/resource/NonNullList.h"
 #include "client/resource/ResourceLocation.h"

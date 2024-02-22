@@ -2,6 +2,10 @@
 
 #include <minecraft/mc.h>
 
+
+
+xf::Vector<mc::TextureAtlas*> AtlasPTRs = {}; 
+	
 mc::Vec3 getLookAt(float yaw, float pitch) {
     return mc::Vec3(
         fabs(sinf(degToRad(pitch - 90.0f))) * sinf(degToRad(yaw   - 180.0f)),
@@ -54,15 +58,28 @@ DECL_FUNCTION(void, MinecraftWorld_RunStaticCtors__Fv, void) {
     // Something like minecraft:bow would be modded:custom_item 
     mc::ResourceLocation loc(L"modded", L"custom_item");
     mc::TestItem* testItem = new mc::TestItem();
+	testItem->iconName            = L"custom_texture_name"; //sets the custom item's texture to your custom icon
     
-    // Set Item Id to 1, so we can get it from the Creative Inventory
+    // Set Item Id to 1, so we can get it from the Creative Inventory, see AddCreativeMenuItem.h to use a custom ID
     mc::Item::registerItem(1, loc, testItem);
+}
+
+DECL_FUNCTION(void, LoadUVs, mc::TextureAtlas* AtlasAddr) {
+    real_LoadUVs(AtlasAddr);
+	AtlasPTRs.push_back(AtlasAddr); // this func only gets called twice, so index 0 is terrain, 1 is items
+	
+	if(AtlasPTRs.getSize() == 2){
+		AtlasPTRs[1]->addIcon(6, 16, L"custom_texture_name"); // Add texture by X, Y, and iconName in the items.png atlas
+		
+	}
 }
 
 int c_main(void*) {
     code::init();
 
     REPLACE(0x026112C0, MinecraftWorld_RunStaticCtors__Fv);
+	
+    REPLACE(0x03367220, LoadUVs); // Create custom iconNames
 
     return 0;
 }
