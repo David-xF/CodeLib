@@ -130,6 +130,7 @@
 #include "util/SoundSource.h"
 #include "util/unordered_map.h"
 #include "util/Vec3.h"
+#include "util/MenuBuilder.h"
 #include "util/VTable_Entity.h"
 #include "util/VTable_Item.h"
 #include "util/VTable.h"
