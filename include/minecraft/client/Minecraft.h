@@ -157,6 +157,14 @@ namespace mc {
         struct Level* getLevel(int i) {
 			return code::Func<struct Level*, 0x0318C878, Minecraft*, int>()(this, i);
 		}
+		static wchar_t* getString(uint32_t StringIDAddr)
+		{
+			return code::Func<wchar_t*, 0x02f24864, uint32_t>()(StringIDAddr);
+		}
+        
+        void getCameraEntity(struct Entity** integer) {
+			return code::Func<void, 0x0318E328, Minecraft*, struct Entity**>()(this, integer);
+		}
 		
 		struct ClientPacketListener* getConnection(int i) {
 			return code::Func<struct ClientPacketListener*, 0x031B2654, Minecraft*, int>()(this, i); 

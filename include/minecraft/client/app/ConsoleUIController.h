@@ -1,6 +1,7 @@
 #pragma once
 
 #include <code/code.h>
+#include "../../ui/scene/UIScene.h"
 
 namespace mc {
     class ConsoleUIController {
@@ -15,6 +16,10 @@ namespace mc {
 
         void PlayUISFX(struct SoundEvent* sound) {
             code::Func<void, 0x02DA7918, ConsoleUIController*, struct SoundEvent*>()(this, sound);
+        }
+
+        void TouchBoxRebuild(UIScene* scene) {
+            code::Func<void, 0x02d9e69c, ConsoleUIController*, UIScene*>()(this, scene);
         }
     };
 }

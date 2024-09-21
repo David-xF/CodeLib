@@ -17,7 +17,19 @@ namespace mstd {
         }
 
         const wstring& assign(const wchar_t* _str, int _length) {
+			
+			this->str[0] =  0;
+			this->length2 = 7;
+			this->length =  0;
             return code::Func<const mstd::wstring&, 0x030E8BC4, wstring*, const wchar_t*, int>()(this, _str, _length);
+        }
+		
+		const wstring& assign(const char* _str, int _length) {
+			
+			this->str[0] =  0;
+			this->length2 = 7;
+			this->length =  0;
+            return code::Func<const mstd::wstring&, 0x02e33e08, wstring*, const char*, int>()(this, _str, _length);
         }
 
         bool operator==(const wchar_t* _str) {

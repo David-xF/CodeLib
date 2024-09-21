@@ -14,5 +14,13 @@ namespace mc {
         void setSingleMessage(const mstd::wstring& wstr, int a, int b) {
             code::Func<void, 0x031390f8, Gui*, const mstd::wstring&, int, int>()(this, wstr, a, b);
         }
+		
+        void displayClientMessage(int LocalisationID) {
+            code::Func<void, 0x03139428, Gui*, int, int>()(this, LocalisationID, 0);
+        }
+		
+        void RenderSlot(int a, int b, int c, float d) {
+            code::Func<void, 0x03137380, Gui*, int, int, int, float>()(this, a, b, c, d);
+        }
     };
 };

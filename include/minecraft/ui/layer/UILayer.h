@@ -10,6 +10,13 @@
 namespace mc {
     class UILayer {
     public:
+	
+	
+		void updateFocusState(bool flag)
+		{
+			code::Func<void, 0x02E7F95C, UILayer*, bool>()(this, flag); 
+		}
+		
         mstd::vector<struct UIScene*> scenes;
         mstd::vector<struct UIScene*> components;
         mstd::vector<struct UIScene*> field_0x20;
