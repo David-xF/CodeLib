@@ -52,9 +52,6 @@ namespace mc {
 				i++;
 			}
 			
-			//this->HowToList.AddNewCheckbox(*(new mstd::wstring(L"This is Enabled")), 0, true);
-			//this->HowToList.AddNewCheckbox(*(new mstd::wstring(L"This is NOT Enabled")), 1, false);
-			
 			this->doHorizontalResizeCheck();
 			this->field_0x17C = 0;
 			((ConsoleUIController*)0x104f73e0)->TouchBoxRebuild(this);
@@ -67,13 +64,6 @@ namespace mc {
 			string.length =  0;
 			string.assign(L"DebugOptionsMenu", 16);
 		}
-		static void getMoviePathHTP(UIScene* scene, mstd::wstring& string)
-		{
-			string.str[0] =  0;
-			string.length2 = 7;
-			string.length =  0;
-			string.assign(L"HowToPlayMenu", 13);
-		}
 		
 		static int getSceneType(UIScene* scene)
 		{
@@ -85,7 +75,6 @@ namespace mc {
 			uint32_t fuiRoot = code::Func<uint32_t, 0x02ba8144, uint32_t>()(scene->fuiFile); // fuiFile::getRootNode
 			
 			mstd::wstring* HowToPlayStr = new mstd::wstring(L"");
-			//HowToPlayStr->assign("HowToList", 9);
 			HowToPlayStr->assign("DebugOptionsList", 16);
 			
 			((UIScene_DebugMenu*)scene)->HowToList.setupControl(scene, fuiRoot, HowToPlayStr);
