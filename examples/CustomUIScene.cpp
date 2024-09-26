@@ -9,7 +9,7 @@ DECL_FUNCTION(uint32_t, NavigateToScene, mc::UILayer* _this, uint32_t p2, uint32
 	{
 		case(0xd): // Check for unused UIScene ID
 		{
-			mc::UIScene_DebugMenu* debug = new mc::UIScene_DebugMenu(p2, p4, (uint32_t)Scene);
+			mc::UIScene_DebugMenu* debug = new mc::UIScene_DebugMenu(p2, p4, (uint32_t)_this);
 			uint32_t SubSceneType = debug->vtbl->getSubSceneType(debug);
 			(*(mc::TelemetryManager**)0x104f6970)->Vtbl->RecordMenuShown(*((mc::TelemetryManager**)0x104f6970), p2, SceneID, SubSceneType);
 		
@@ -29,7 +29,7 @@ DECL_FUNCTION(uint32_t, NavigateToScene, mc::UILayer* _this, uint32_t p2, uint32
 		
 			code::Func<void, 0x02e34e18, uint32_t*, mc::UIScene_DebugMenu**>()((uint32_t*)&_this->scenes, &debug); // vector<UIScene**>.push_back
 			_this->updateFocusState(false);
-			_this->vtbl->tick(debug);
+			debug->vtbl->tick(debug);
 		return 1;
 		}
 		break;
